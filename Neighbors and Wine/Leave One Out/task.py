@@ -67,7 +67,8 @@ if __name__ == '__main__':
     euclidean_opt = loocv(X_train, y_train, euclidean_dist)
     taxicab_opt = loocv(X_train, y_train, taxicab_dist)
 
-    print(euclidean_opt, taxicab_opt)
+    print("optimal euclidian k = " + euclidean_opt)
+    print("optimal taxicab k = " + taxicab_opt)
     y_euclidean_predicted = knn(X_train, y_train, X_test, euclidean_opt, euclidean_dist)
     print_precision_recall(precision_recall(y_euclidean_predicted, y_test))
 
