@@ -1,0 +1,9 @@
+title: Machine Learning 101
+language: English
+summary: |-
+  Introductory Machine Learning course.
+  This course was originally developed for the Machine Learning course in Academic University, St. Petersburg, Russia.
+programming_language: Python
+environment: unittest
+content:
+- Neighbors and Wine

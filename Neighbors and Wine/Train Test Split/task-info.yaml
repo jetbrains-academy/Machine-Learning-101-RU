@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 64
+    length: 208
+    placeholder_text: '# implement train_test_split function'
+- name: wine.csv
+  visible: true
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false
+- name: wine.jpg
+  visible: false
