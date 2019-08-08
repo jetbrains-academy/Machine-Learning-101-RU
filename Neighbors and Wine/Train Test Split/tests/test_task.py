@@ -12,8 +12,6 @@ class TestCase(unittest.TestCase):
         X_train, y_train, X_test, y_test = train_test_split(X, y, ratio=.5)
 
         self.assertEqual(len(y_test), len(y_train), "Check your function with ratio=0.5")
-        assert_array_equal(X_train[:, 0], y_train * 10)
-        assert_array_equal(X_test[:, 0], y_test * 10)
 
     def test_arrays_length(self):
         X = np.arange(100).reshape((10, 10))
