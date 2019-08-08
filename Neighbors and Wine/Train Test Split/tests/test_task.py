@@ -1,4 +1,4 @@
-from numpy.ma.testutils import assert_array_equal
+from numpy.ma.testutils import assert_array_equal, fail_if_array_equal
 
 from ..task import train_test_split
 import unittest
@@ -30,3 +30,14 @@ class TestCase(unittest.TestCase):
                          "len(X_train) / (len(X_test) + len(X_train)) != ratio")
         self.assertEqual(len(y_train) / (len(y_test) + len(y_train)), ratio,
                          "len(y_train) / (len(y_test) + len(y_train)) != ratio")
+
+    def test_randomize(self):
+        X = np.arange(100).reshape((10, 10))
+        y = np.arange(10)
+        ratio = .8
+        X_train, y_train, X_test, y_test = train_test_split(X, y, ratio=ratio)
+        X_train1, y_train1, X_test1, y_test1 = train_test_split(X, y, ratio=ratio)
+        fail_if_array_equal(X_train, X_train1, "train_test_split should split arrays into random train and test subsets")
+        fail_if_array_equal(X_test, X_test1, "train_test_split should split arrays into random train and test subsets")
+        fail_if_array_equal(y_train, y_train1, "train_test_split should split arrays into random train and test subsets")
+        fail_if_array_equal(y_test, y_test1, "train_test_split should split arrays into random train and test subsets")
