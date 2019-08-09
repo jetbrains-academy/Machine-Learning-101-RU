@@ -1,0 +1,32 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 294
+    length: 528
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Bayes guards SMS
+      task: Naive Bayes
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 937
+    length: 864
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Bayes guards SMS
+      task: Naive Bayes
+      file: task.py
+      placeholder: 2
+      is_visible: false
+  - offset: 1837
+    length: 640
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: true
+- name: spam.txt
+  visible: true
+- name: tests/test_task.py
+  visible: false
