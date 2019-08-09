@@ -13,7 +13,7 @@
         for (percent, color) in zip(hist, centroids):
             # вычислить end_x
             cv2.rectangle(bar, (int(start_x), 0), (int(end_x), 50),
-                color.astype("uint8").tolist(), -1)
+            color.astype("uint8").tolist(), -1)
             # обновить значение start_x
     
         return bar

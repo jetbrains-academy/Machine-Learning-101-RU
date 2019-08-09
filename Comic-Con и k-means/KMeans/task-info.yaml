@@ -3,21 +3,12 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 105
-    length: 38
+  - offset: 91
+    length: 66
     placeholder_text: '# read image from path'
-    dependency:
-      lesson: Comic-Con и k-means
-      task: Read Image
-      file: task.py
-      placeholder: 1
-      is_visible: false
-  - offset: 394
-    length: 311
-    placeholder_text: '# initialize cluster centers'
-  - offset: 782
-    length: 475
-    placeholder_text: '# implement kmeans algorithm'
+  - offset: 294
+    length: 673
+    placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
 - name: superman-batman.png

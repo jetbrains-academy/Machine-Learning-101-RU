@@ -3,8 +3,8 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 61
-    length: 38
+  - offset: 91
+    length: 66
     placeholder_text: '# read image from path'
 - name: tests/test_task.py
   visible: false
