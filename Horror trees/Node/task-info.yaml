@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 104
+    length: 127
+    placeholder_text: '#TODO'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: true
+- name: tests/__init__.py
+  visible: false
+- name: halloween.csv
+  visible: true
+- name: boo.jpg
+  visible: true

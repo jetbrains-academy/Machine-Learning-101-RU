@@ -1,0 +1,41 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 379
+    length: 233
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Horror trees
+      task: Decision Tree
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 719
+    length: 127
+    placeholder_text: '#TODO'
+    dependency:
+      lesson: Horror trees
+      task: Decision Tree
+      file: task.py
+      placeholder: 2
+      is_visible: false
+  - offset: 919
+    length: 1625
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Horror trees
+      task: Decision Tree
+      file: task.py
+      placeholder: 3
+      is_visible: false
+  - offset: 2580
+    length: 663
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: true
+- name: halloween.csv
+  visible: true
+- name: tests/test_task.py
+  visible: false
