@@ -7,7 +7,7 @@ programming_language: Python
 environment: unittest
 content:
 - Neighbors and Wine
-- Comic-Con и k-means
+- Comic-Con and k-means
 - Horror trees
 - Bayes guards SMS
 - Pima indians diabetes, linear classifier
