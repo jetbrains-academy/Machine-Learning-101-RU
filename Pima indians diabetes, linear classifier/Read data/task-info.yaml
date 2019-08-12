@@ -1,7 +1,5 @@
 type: edu
 files:
-- name: task.py
-  visible: true
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
@@ -10,3 +8,9 @@ files:
   visible: false
 - name: pima-indians-diabetes.csv
   visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 47
+    length: 273
+    placeholder_text: '# TODO'

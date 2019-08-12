@@ -10,5 +10,13 @@ def read_data(fname):
     return X, y
 
 
+def log_loss(M):
+    return np.log2(1 + np.e**(-M)), -1 / (1 + np.e**M)
+
+
+def sigmoid_loss(M):
+    return 2 / (1 + np.exp(M)), -2 * np.exp(M) / (np.exp(M) + 1) ** 2
+
+
 if __name__ == '__main__':
     X, y = read_data("pima-indians-diabetes.csv")

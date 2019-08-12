@@ -1,0 +1,95 @@
+type: edu
+files:
+- name: __init__.py
+  visible: true
+- name: pima-indians-diabetes.csv
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 79
+    length: 273
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 376
+    length: 50
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 2
+      is_visible: false
+  - offset: 454
+    length: 65
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 3
+      is_visible: false
+  - offset: 761
+    length: 520
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 4
+      is_visible: false
+  - offset: 1317
+    length: 35
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 5
+      is_visible: false
+  - offset: 1570
+    length: 676
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 6
+      is_visible: false
+  - offset: 2282
+    length: 35
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 7
+      is_visible: false
+  - offset: 2363
+    length: 208
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 9
+      is_visible: false
+  - offset: 2684
+    length: 469
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes, linear classifier
+      task: Stochastic Gradient Descent
+      file: task.py
+      placeholder: 8
+      is_visible: false
+  - offset: 3464
+    length: 1829
+    placeholder_text: '# TODO'
+- name: tests/test_task.py
+  visible: false
