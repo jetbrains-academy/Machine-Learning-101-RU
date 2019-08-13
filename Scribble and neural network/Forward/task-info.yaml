@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 400
+    length: 1119
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Scribble and neural network
+      task: Visualize MNIST
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 2313
+    length: 102
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: true
+- name: mnist.jpg
+  visible: true
+- name: tests/test_task.py
+  visible: false
