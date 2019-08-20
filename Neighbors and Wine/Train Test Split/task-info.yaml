@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 64
-    length: 208
+    length: 189
     placeholder_text: '# implement train_test_split function'
 - name: wine.csv
   visible: true
