@@ -1,9 +1,8 @@
 import unittest
 
 import numpy as np
-from numpy.ma.testutils import assert_array_equal
 
-from ..task import knn, euclidean_dist, precision_recall, print_precision_recall
+from ..task import precision_recall
 
 
 class TestCase(unittest.TestCase):
