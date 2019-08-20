@@ -10,8 +10,8 @@ def train_test_split(X, y, ratio=0.8):
 def knn(X_train, y_train, X_test, k, dist):
     def classify_single(x):
         dists = [dist(x, i) for i in X_train]
-        nei_indexes = np.argpartition(dists, k)[:k]
-        return np.argmax(np.bincount(y_train[nei_indexes]))
+        indexes = np.argpartition(dists, k)[:k]
+        return np.argmax(np.bincount(y_train[indexes]))
 
     return [classify_single(x) for x in X_test]
 
