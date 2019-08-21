@@ -6,8 +6,14 @@ files:
   - offset: 91
     length: 66
     placeholder_text: '# read image from path'
-  - offset: 294
-    length: 673
+    dependency:
+      lesson: Comic-Con and k-means
+      task: Read Image
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 554
+    length: 490
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: true

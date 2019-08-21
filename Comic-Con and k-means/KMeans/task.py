@@ -11,13 +11,18 @@ def euclidean_distance(A, B):
     return np.sqrt(np.sum(np.square(A - B), axis=1))
 
 
+def init_clusters(n_clusters, n_features):
+    return np.random.random_integers(low=0, high=255, size=(n_clusters, n_features))
+
+
 def k_means(X, n_clusters, distance_metric):
     n_samples, n_features = X.shape
     classification = np.zeros(n_samples)
-    clusters = np.random.random_integers(low=0, high=255, size=(n_clusters, n_features))
+    clusters = init_clusters(n_clusters, n_features)
     distance = np.zeros((n_clusters, n_samples))
 
     while True:
+        print("1")
         for i, c in enumerate(clusters):
             distance[i] = distance_metric(X, c)
         new_classification = np.argmin(distance, axis=0)
@@ -33,3 +38,6 @@ def k_means(X, n_clusters, distance_metric):
 if __name__ == '__main__':
     image = read_image()
     (centroids, labels) = k_means(image, 4, euclidean_distance)
+    print("Cluster centers:")
+    for label in labels:
+        print(label)

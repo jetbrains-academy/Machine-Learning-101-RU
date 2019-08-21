@@ -12,11 +12,11 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 320
-    length: 673
+  - offset: 486
+    length: 471
     placeholder_text: '# TODO'
     dependency:
-      lesson: Comic-Con и k-means
+      lesson: Comic-Con and k-means
       task: Plotting
       file: task.py
       placeholder: 2

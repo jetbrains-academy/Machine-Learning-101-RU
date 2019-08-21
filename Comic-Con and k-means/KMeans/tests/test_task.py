@@ -1,16 +1,25 @@
 import unittest
-
 import numpy as np
+from numpy.testing import assert_array_equal
 
-from ..task import k_means
+from ..task import k_means, euclidean_distance
+from .. import task
 
 
 class TestCase(unittest.TestCase):
-    def test_kmeans(self):
-        def euclidean_distance(A, B):
-            return np.sqrt(np.sum(np.square(A - B), axis=1))
-
+    def test_kmeans_sizes(self):
         X = np.array([[0, 0], [0, 1], [0, 1]])
-        centers, labels = k_means(X, 2, euclidean_distance)
+        labels, centers = k_means(X, 2, euclidean_distance)
         self.assertEqual(2, len(centers))
         self.assertEqual(3, len(labels))
+
+    def test_kmeans_results(self):
+        X = np.array([[0, 0], [0.5, 0], [0.5, 1], [1, 1]])
+        expected_labels = [0, 0, 1, 1]
+        expected_centers = np.array([[0, 0], [0, 1]])
+
+        task.init_clusters = lambda x, y: np.array([[0, 0], [1, 1]])
+
+        classification, clusters = k_means(X, 2, euclidean_distance)
+        assert_array_equal(classification, expected_labels)
+        assert_array_equal(clusters, expected_centers)
