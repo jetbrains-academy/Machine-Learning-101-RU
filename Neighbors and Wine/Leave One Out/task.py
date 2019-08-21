@@ -68,6 +68,7 @@ if __name__ == '__main__':
 
     print("optimal euclidian k = " + str(euclidean_opt))
     print("optimal taxicab k = " + str(taxicab_opt))
+
     y_euclidean_predicted = knn(X_train, y_train, X_test, euclidean_opt, euclidean_dist)
     print_precision_recall(precision_recall(y_euclidean_predicted, y_test))
 

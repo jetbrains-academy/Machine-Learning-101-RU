@@ -8,7 +8,7 @@
 Таким образом, крайние значения `k` нежелательны.
 
 На практике оптимальное значения параметра `k` определяют по критерию скользящего контроля с исключением объектов по одному:
-${LOO(k, X^l) = \sum\limits_{i=1}^l [a(x_i; X^l \backslash {x_i}, k) \neq y_i] \rightarrow \min\limits_k}$
+${LOO(k, X^l) = \sum\limits_{i=1}^l [a(x_i; X^l \backslash \\{x_i\\}, k) \neq y_i] \rightarrow \min\limits_k}$
 
 ### Задание
 
