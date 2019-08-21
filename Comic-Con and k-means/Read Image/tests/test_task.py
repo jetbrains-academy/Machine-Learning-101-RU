@@ -11,3 +11,7 @@ class TestCase(unittest.TestCase):
         image = read_image("./Read Image/tests/star.png")
         expected_star = np.loadtxt("./Read Image/tests/star.txt")
         assert_array_equal(expected_star, image)
+
+    def test_shape(self):
+        image = read_image("./Read Image/superman-batman.png")
+        self.assertEqual((786432, 3), image.shape)
