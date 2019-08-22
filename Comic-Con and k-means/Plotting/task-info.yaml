@@ -21,6 +21,9 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
+  - offset: 1032
+    length: 72
+    placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
 - name: superman-batman.png

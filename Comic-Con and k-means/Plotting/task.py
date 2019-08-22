@@ -44,7 +44,6 @@ def plot_colors(hist, centroids):
     sum_hist = np.sum(hist)
     for (percent, color) in zip(hist, centroids):
         end_x = start_x + percent * 500 / sum_hist
-        print(color[-1])
         draw.rectangle(((int(start_x), 0), (int(end_x), 50)), tuple(color))
         start_x = end_x
 
@@ -53,6 +52,7 @@ def plot_colors(hist, centroids):
 
 if __name__ == '__main__':
     image = read_image()
-    (labels, centroids) = k_means(image, 4, euclidean_distance)
-    hist = centroid_histogram(labels)
+    (pixel_labels, centroids) = k_means(image, 4, euclidean_distance)
+    print(pixel_labels)
+    hist = centroid_histogram(pixel_labels)
     plot_colors(hist, centroids)

@@ -44,7 +44,6 @@ def plot_colors(hist, centroids):
     sum_hist = np.sum(hist)
     for (percent, color) in zip(hist, centroids):
         end_x = start_x + percent * 500 / sum_hist
-        print(color[-1])
         draw.rectangle(((int(start_x), 0), (int(end_x), 50)), tuple(color))
         start_x = end_x
 
