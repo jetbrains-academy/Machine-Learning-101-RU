@@ -1,15 +1,7 @@
 import numpy as np
-from math import log
+from math import log2
 from PIL import Image, ImageDraw
 import pandas as pd
-
-
-def uniquecounts(y):
-    result = []
-    result.append(np.count_nonzero(y == 0))
-    result.append(np.count_nonzero(y == 1))
-    result.append(np.count_nonzero(y == 2))
-    return result
 
 
 class LabelEncoder:
@@ -25,12 +17,9 @@ label_encoder = LabelEncoder()
 
 
 def entropy(y):
-    log2 = lambda x: log(x) / log(2)
-    results = uniquecounts(y)
+    _, results = np.unique(y, return_counts=True)
     ent = 0.0
     for i, r in enumerate(results):
-        if r == 0:
-            continue
         p = float(results[i]) / len(y)
         ent -= p * log2(p)
     return ent

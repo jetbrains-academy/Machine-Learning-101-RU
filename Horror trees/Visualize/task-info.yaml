@@ -3,8 +3,8 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 520
-    length: 233
+  - offset: 332
+    length: 176
     placeholder_text: '# TODO'
     dependency:
       lesson: Horror trees
@@ -12,7 +12,7 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 860
+  - offset: 615
     length: 127
     placeholder_text: '#TODO'
     dependency:
@@ -21,7 +21,7 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 1060
+  - offset: 815
     length: 1624
     placeholder_text: '# TODO'
     dependency:
@@ -30,7 +30,7 @@ files:
       file: task.py
       placeholder: 3
       is_visible: false
-  - offset: 2720
+  - offset: 2475
     length: 663
     placeholder_text: '# TODO'
     dependency:
@@ -39,10 +39,10 @@ files:
       file: task.py
       placeholder: 4
       is_visible: false
-  - offset: 3410
+  - offset: 3165
     length: 115
     placeholder_text: '# TODO'
-  - offset: 3552
+  - offset: 3307
     length: 123
     placeholder_text: '# TODO'
 - name: __init__.py

@@ -3,10 +3,10 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 175
-    length: 233
+  - offset: 63
+    length: 176
     placeholder_text: '# TODO'
-  - offset: 515
+  - offset: 346
     length: 127
     placeholder_text: '#TODO'
     dependency:
