@@ -2,6 +2,8 @@ from PIL import Image
 from PIL import ImageDraw
 import numpy as np
 
+IMAGE_WIDTH = 768
+IMAGE_HEIGHT = 1024
 
 def read_image(path='superman-batman.png'):
     image = Image.open(path)
@@ -52,11 +54,11 @@ def plot_colors(hist, centroids):
 
 def recolor(image, n_colors):
     (labels, centroids) = k_means(image.astype(np.int64), n_colors, euclidean_distance)
-    return centroids[labels].reshape(1024, 768, 3).astype('uint8')
+    return centroids[labels]
 
 
 if __name__ == '__main__':
     image = read_image()
-    recolored_image = recolor(image, 16)
+    recolored_image = recolor(image, 4).reshape(IMAGE_HEIGHT, IMAGE_WIDTH, 3).astype('uint8')
     image = Image.fromarray(recolored_image)
     image.save("recolored-superman-batman.png")

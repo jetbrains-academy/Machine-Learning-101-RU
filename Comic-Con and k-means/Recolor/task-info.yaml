@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 117
+  - offset: 155
     length: 66
     placeholder_text: '# read image from path'
     dependency:
@@ -12,7 +12,7 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 486
+  - offset: 524
     length: 471
     placeholder_text: '# TODO'
     dependency:
@@ -21,7 +21,7 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 1032
+  - offset: 1070
     length: 72
     placeholder_text: '# TODO'
     dependency:
@@ -30,6 +30,9 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
+  - offset: 1621
+    length: 116
+    placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
 - name: superman-batman.png
