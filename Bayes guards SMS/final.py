@@ -1,6 +1,6 @@
 import numpy as np
 import codecs
-
+import string
 
 def test_train_split(X, y, ratio=0.8):
     mask = np.random.uniform(size=len(y)) < ratio
@@ -8,8 +8,8 @@ def test_train_split(X, y, ratio=0.8):
 
 
 def split_by_words(X):
-    X = np.core.chararray.lower(X)
-    return np.core.chararray.split(X)
+    return np.core.chararray.lower(X).translate(str.maketrans('', '', string.punctuation)).split()
+
 
 
 def vectorize(X):

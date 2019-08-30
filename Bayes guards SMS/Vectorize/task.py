@@ -1,9 +1,9 @@
 import numpy as np
+import string
 
 
 def split_by_words(X):
-    X = np.core.chararray.lower(X)
-    return np.core.chararray.split(X)
+    return np.core.chararray.lower(X).translate(str.maketrans('', '', string.punctuation)).split()
 
 
 def vectorize(X):
@@ -22,4 +22,4 @@ def vectorize(X):
             word_index = index_dict[word]
             vectorization[index, word_index] = count[i]
 
-    return vectorization, index_dict
+    return index_dict, vectorization
