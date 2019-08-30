@@ -1,5 +1,12 @@
 import numpy as np
-from math import log2
+import pandas as pd
+
+
+def read_data(path):
+    data = pd.read_csv(path)
+    y = data[['type']]
+    X = data.drop('type', 1)
+    return X.as_matrix(), y, X.columns.values
 
 
 class LabelEncoder:
@@ -12,12 +19,9 @@ class LabelEncoder:
 
 
 def entropy(y):
-    _, results = np.unique(y, return_counts=True)
-    ent = 0.0
-    for i, r in enumerate(results):
-        p = float(results[i]) / len(y)
-        ent -= p * log2(p)
-    return ent
+    _, counts = np.unique(y, return_counts=True)
+    p = counts / len(y)
+    return -(p * np.log2(p)).sum()
 
 
 class Node:
@@ -28,48 +32,67 @@ class Node:
         self.false_branch = false_branch
 
 
-class DecisionTree:
-    def build(self, X, y, score=entropy):
-        self.root = self.build_subtree(X, y, score)
-        return self
+class Predicate:
+    def __init__(self, column, value):
+        self.column = column
+        self.value = value
 
-    def build_subtree(self, X, y, score=entropy):
-        if len(X) == 0:
-            return Node()
-        current_score = score(y)
-
-        # Set up some variables to track the best criteria
-        best_gain = 0.0
-        best_criteria = None
-        best_sets = None
-
-        column_count = len(X[0])
-        for col in range(0, column_count):
-            column_values = np.unique(X[:, col])
-
-            for value in column_values:
-                X1, y1, X2, y2 = self.divideset(X, y, col, value)
-
-                # Information gain
-                p = float(len(X1)) / len(X)
-                gain = current_score - p * score(y1) - (1 - p) * score(y2)
-                if gain > best_gain and len(X1) > 0 and len(X2) > 0:
-                    best_gain = gain
-                    best_criteria = (col, value)
-                    best_sets = (X1, y1, X2, y2)
-        # Create the sub branches
-        if best_gain > 0:
-            true_branch = self.build_subtree(best_sets[0], best_sets[1])
-            false_branch = self.build_subtree(best_sets[2], best_sets[3])
-            return Node(column=best_criteria[0], value=best_criteria[1],
-                        true_branch=true_branch, false_branch=false_branch)
+    def divide(self, X, y):
+        if isinstance(self.value, int) or isinstance(self.value, float):
+            mask = X[:, self.column] >= self.value
         else:
-            return LabelEncoder().decode(np.argmax(uniquecounts(y)))
-
-    def divideset(self, X, y, column, value):
-        if isinstance(value, int) or isinstance(value, float):
-            mask = X[:, column] >= value
-        else:
-            mask = X[:, column] == value
+            mask = X[:, self.column] == self.value
 
         return X[mask], y[mask], X[~mask], y[~mask]
+
+    def information_gain(self, X, y):
+        X1, y1, X2, y2 = self.divide(X, y)
+        p = float(len(X1)) / len(X)
+        gain = entropy(y) - p * entropy(y1) - (1 - p) * entropy(y2)
+        return gain
+
+
+class DecisionTree:
+    def build(self, X, y):
+        self.root = self.build_subtree(X, y)
+        return self
+
+    def build_subtree(self, X, y):
+        predicate = self.get_best_predicate(X, y)
+
+        if predicate:
+            X1, y1, X2, y2 = predicate.divide(X, y)
+            true_branch = self.build_subtree(X1, y1)
+            false_branch = self.build_subtree(X2, y2)
+            return Node(column=predicate.column, value=predicate.value,
+                        true_branch=true_branch, false_branch=false_branch)
+        else:
+            unique_y = np.unique(y, return_counts=True)
+            return unique_y[np.argmax(unique_y[1])][0]
+
+    def get_best_predicate(self, X, y):
+        best_predicate = None
+        best_gain = 0.0
+        column_count = len(X[0])
+
+        for column in range(0, column_count):
+            column_values = np.unique(X[:, column])
+
+            for value in column_values:
+                predicate = Predicate(column, value)
+                gain = predicate.information_gain(X, y)
+                if gain > best_gain:
+                    best_predicate = predicate
+                    best_gain = gain
+
+        return best_predicate
+
+
+if __name__ == '__main__':
+    path = "halloween.csv"
+    X, y, columns = read_data(path)
+    label_encoder = LabelEncoder()
+    y = label_encoder.encode(y)
+
+    tree = DecisionTree()
+    tree = tree.build(X, y)

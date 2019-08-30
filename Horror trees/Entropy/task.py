@@ -1,14 +1,10 @@
 import numpy as np
-from math import log2
 
 
 def entropy(y):
-    _, results = np.unique(y, return_counts=True)
-    ent = 0.0
-    for i, r in enumerate(results):
-        p = float(results[i]) / len(y)
-        ent -= p * log2(p)
-    return ent
+    _, counts = np.unique(y, return_counts=True)
+    p = counts / len(y)
+    return -(p * np.log2(p)).sum()
 
 
 class Node:

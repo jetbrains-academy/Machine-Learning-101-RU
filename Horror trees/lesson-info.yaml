@@ -2,6 +2,7 @@ type: framework
 content:
 - Node
 - Entropy
+- Predicate
+- Information Gain
 - Decision Tree
 - Predict
-- Visualize

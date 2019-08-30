@@ -3,44 +3,26 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 394
+  - offset: 41
     length: 103
     placeholder_text: '# TODO'
     dependency:
       lesson: Horror trees
-      task: Information Gain
+      task: Entropy
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 604
+  - offset: 251
     length: 127
     placeholder_text: '#TODO'
     dependency:
       lesson: Horror trees
-      task: Information Gain
+      task: Entropy
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 883
+  - offset: 530
     length: 233
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Horror trees
-      task: Information Gain
-      file: task.py
-      placeholder: 3
-      is_visible: false
-  - offset: 1164
-    length: 158
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Horror trees
-      task: Information Gain
-      file: task.py
-      placeholder: 4
-      is_visible: false
-  - offset: 1380
-    length: 1126
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: true

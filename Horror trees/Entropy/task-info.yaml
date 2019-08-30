@@ -3,18 +3,12 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 63
-    length: 176
+  - offset: 41
+    length: 103
     placeholder_text: '# TODO'
-  - offset: 346
+  - offset: 251
     length: 127
     placeholder_text: '#TODO'
-    dependency:
-      lesson: Horror trees
-      task: Node
-      file: task.py
-      placeholder: 1
-      is_visible: false
 - name: __init__.py
   visible: true
 - name: halloween.csv

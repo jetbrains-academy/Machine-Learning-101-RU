@@ -10,16 +10,6 @@ $$H = - \sum\limits_{i=1}^{C} p_i \log_2 p_i$$
 
 where $p_i$ -- the frequentist probability of an element/class $i$ in our data
 
-####Information Gain
-
-The information gain is based on the decrease in entropy after a dataset is split on an attribute.
-Constructing a decision tree is all about finding attribute that returns the highest information gain.
-
-$$IGain = H(parent) - H(children) $$
-
-We simply subtract the entropy of `Y` given `X` from the entropy of just `Y` to calculate the reduction of uncertainty about
-`Y` given an additional piece of information `X` about `Y`.
-
 
 ### Задание
 
