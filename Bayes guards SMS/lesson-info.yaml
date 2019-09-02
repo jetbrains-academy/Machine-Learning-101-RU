@@ -2,5 +2,5 @@ type: framework
 content:
 - Vectorize
 - Naive Bayes
+- Laplace Smoothing
 - Predict
-- Score

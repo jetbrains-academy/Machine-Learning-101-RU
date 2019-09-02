@@ -3,25 +3,25 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 294
+  - offset: 334
     length: 528
     placeholder_text: '# TODO'
     dependency:
       lesson: Bayes guards SMS
-      task: Naive Bayes
+      task: Laplace Smoothing
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 937
-    length: 864
+  - offset: 1393
+    length: 448
     placeholder_text: '# TODO'
     dependency:
       lesson: Bayes guards SMS
-      task: Naive Bayes
+      task: Laplace Smoothing
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 1837
+  - offset: 1877
     length: 640
     placeholder_text: '# TODO'
 - name: __init__.py

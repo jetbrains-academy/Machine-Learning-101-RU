@@ -6,26 +6,28 @@ from ..task import NaiveBayes
 
 
 class TestCase(unittest.TestCase):
-    def test_score(self):
+    def test_classes_words_count(self):
         nb = NaiveBayes()
         X = np.array(['A great game', 'The election was over', 'Very clean match', 'A clean but forgettable game',
                           'It was a close election'])
         y = np.array(['Sports', 'Not sports', 'Sports', 'Sports', 'Not sports'])
         nb.fit(X, y)
-        self.assertTrue(1, nb.score(X, y))
+        self.assertTrue(9 in nb.classes_words_count)
+        self.assertTrue(11 in nb.classes_words_count)
 
-    def test_game(self):
+    def test_classes_prior(self):
         nb = NaiveBayes()
         X = np.array(['A great game', 'The election was over', 'Very clean match', 'A clean but forgettable game',
                           'It was a close election'])
         y = np.array(['Sports', 'Not sports', 'Sports', 'Sports', 'Not sports'])
         nb.fit(X, y)
-        self.assertTrue("Sports", nb.predict(np.array(["Game"])))
+        self.assertTrue(0.4 in nb.classes_prior)
+        self.assertTrue(0.6 in nb.classes_prior)
 
-    def test_election(self):
+    def test_zero_likelihood(self):
         nb = NaiveBayes()
         X = np.array(['A great game', 'The election was over', 'Very clean match', 'A clean but forgettable game',
                           'It was a close election'])
         y = np.array(['Sports', 'Not sports', 'Sports', 'Sports', 'Not sports'])
         nb.fit(X, y)
-        self.assertTrue("Sports", nb.predict(np.array(["election"])))
+        self.assertTrue(0 not in nb.likelihood)

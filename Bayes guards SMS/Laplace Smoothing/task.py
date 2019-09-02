@@ -1,5 +1,6 @@
 import numpy as np
 import codecs
+import string
 
 
 def test_train_split(X, y, ratio=0.8):
@@ -8,8 +9,7 @@ def test_train_split(X, y, ratio=0.8):
 
 
 def split_by_words(X):
-    X = np.core.chararray.lower(X)
-    return np.core.chararray.split(X)
+    return np.core.chararray.lower(X).translate(str.maketrans('', '', string.punctuation)).split()
 
 
 def vectorize(X):
@@ -28,7 +28,7 @@ def vectorize(X):
             word_index = index_dict[word]
             vectorization[index, word_index] = count[i]
 
-    return vectorization, index_dict
+    return index_dict, vectorization
 
 
 class NaiveBayes:
@@ -38,7 +38,7 @@ class NaiveBayes:
     def fit(self, X, y):
         self.unique_classes = np.unique(y)
 
-        X, self.dictionary = vectorize(X)
+        self.dictionary, X = vectorize(X)
         self.dict_size = len(self.dictionary)
 
         self.classes_prior = np.zeros(len(self.unique_classes), dtype=np.float64)
@@ -55,26 +55,6 @@ class NaiveBayes:
             denominator = self.classes_words_count[i] + self.alpha * self.dict_size
             self.likelihood[i] = self.likelihood[i] / denominator
 
-    def predict(self, X):
-        result = []
-        X = split_by_words(X)
-        for message in X:
-            unique = np.unique(message)
-            index_array = np.zeros(unique.shape, dtype=np.int64)
-
-            for i, word in enumerate(unique):
-                word_index = self.dictionary[word] if word in self.dictionary else self.dict_size
-                index_array[i] = word_index
-
-            log_likelihood = np.log(self.likelihood[:, index_array])
-            posterior = np.log(self.classes_prior) + np.sum(log_likelihood, axis=1)
-            predicted = self.unique_classes[np.argmax(posterior)]
-            result.append(predicted)
-        return result
-
-    def score(self, X, y):
-        return np.sum(self.predict(X) == y) / len(y)
-
 
 def read_data(path):
     file = codecs.open(path, encoding='latin1')
@@ -88,5 +68,6 @@ if __name__ == '__main__':
 
     nb = NaiveBayes()
     nb.fit(X_train, y_train)
-    print(nb.score(X_test, y_test))
-    print(nb.score(X_train, y_train))
+    print(nb.classes_words_count)
+    print(nb.classes_prior)
+    print(nb.likelihood)

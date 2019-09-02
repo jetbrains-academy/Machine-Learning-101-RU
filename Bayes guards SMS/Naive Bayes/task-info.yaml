@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 294
+  - offset: 334
     length: 528
     placeholder_text: '# TODO'
     dependency:
@@ -12,8 +12,8 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 937
-    length: 864
+  - offset: 1324
+    length: 418
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: true

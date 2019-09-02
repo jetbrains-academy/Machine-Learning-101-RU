@@ -7,7 +7,7 @@ from ..task import vectorize
 
 class TestCase(unittest.TestCase):
     def test_dictionary(self):
-        X = np.array(["Who let the dogs out?", " Who, who, who, who?"])
+        X = np.array(['Who let the dogs out?', 'Who, who, who, who?'])
         dictionary, result = vectorize(X)
         keys = {'dogs', 'let', 'out', 'the', 'who'}
         values = {0, 1, 2, 3, 4}
