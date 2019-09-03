@@ -1,5 +1,5 @@
 Алгоритм классификации выглядит следующим образом:
-$$\arg\max\limits_{y \in Y}  \prod P(x^j |y) \times P(y)$$
+$$\arg\max\limits_{y \in Y}  \prod  P(y) \times  P(x^j |y)$$
 
 $y$ -- Spam or Ham classes
 
@@ -9,7 +9,7 @@ $x^j$ -- j-е слово в предложении
 Стандартный способ избежать [арифметического переполнения снизу](https://en.wikipedia.org/wiki/Arithmetic_underflow) --
 применение логарифма к выражению, стоящему под $\arg\max$.
 Таким образом формула для нашего алгоритма переписывается следующим образом:
-$$a(x) = \arg\max\limits_{y \in Y} [ \log(P(y)) + \sum\limits_{j=1}^{|V|} log(p(x^j |y))]$$
+$$ \arg\max\limits_{y \in Y} [ \log(P(y)) + \sum\limits_{j=1}^{|V|} log(p(x^j |y))]$$
 
 ## Задание
 Реализуйте метод `predict`, принимающий массив объектов `X` и возвращающий список соответствующих меток классов.
