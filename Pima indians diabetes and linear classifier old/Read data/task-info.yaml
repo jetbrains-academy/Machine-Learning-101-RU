@@ -14,3 +14,5 @@ files:
   - offset: 47
     length: 273
     placeholder_text: '# TODO'
+- name: pima.png
+  visible: true
