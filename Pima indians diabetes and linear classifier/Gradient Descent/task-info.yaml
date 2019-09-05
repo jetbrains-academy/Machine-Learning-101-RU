@@ -1,0 +1,59 @@
+type: edu
+files:
+- name: __init__.py
+  visible: true
+- name: pima-indians-diabetes.csv
+  visible: true
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 79
+    length: 273
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes and linear classifier
+      task: Loss function
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 398
+    length: 208
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Neighbors and Wine
+      task: Precision Recall
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 1370
+    length: 51
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes and linear classifier
+      task: Loss function
+      file: task.py
+      placeholder: 2
+      is_visible: false
+  - offset: 1449
+    length: 65
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes and linear classifier
+      task: Loss function
+      file: task.py
+      placeholder: 3
+      is_visible: false
+  - offset: 1876
+    length: 377
+    placeholder_text: '# TODO'
+  - offset: 719
+    length: 469
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Neighbors and Wine
+      task: Precision Recall
+      file: task.py
+      placeholder: 3
+      is_visible: false
+- name: tests/test_task.py
+  visible: false

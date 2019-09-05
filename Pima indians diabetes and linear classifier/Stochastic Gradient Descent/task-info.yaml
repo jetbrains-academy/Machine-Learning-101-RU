@@ -7,74 +7,62 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 47
+  - offset: 79
     length: 273
     placeholder_text: '# TODO'
     dependency:
-      lesson: Pima indians diabetes, linear classifier
+      lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 344
-    length: 50
+  - offset: 398
+    length: 208
     placeholder_text: '# TODO'
     dependency:
-      lesson: Pima indians diabetes, linear classifier
+      lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 422
-    length: 65
+  - offset: 719
+    length: 469
     placeholder_text: '# TODO'
     dependency:
-      lesson: Pima indians diabetes, linear classifier
+      lesson: Pima indians diabetes and linear classifier
+      task: Gradient Descent
+      file: task.py
+      placeholder: 6
+      is_visible: false
+  - offset: 1370
+    length: 51
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
       placeholder: 3
       is_visible: false
-  - offset: 729
-    length: 520
+  - offset: 1449
+    length: 65
     placeholder_text: '# TODO'
     dependency:
-      lesson: Pima indians diabetes, linear classifier
+      lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
       placeholder: 4
       is_visible: false
-  - offset: 1285
-    length: 35
+  - offset: 1876
+    length: 377
     placeholder_text: '# TODO'
     dependency:
-      lesson: Pima indians diabetes, linear classifier
+      lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
       placeholder: 5
       is_visible: false
-  - offset: 1538
-    length: 676
+  - offset: 2684
+    length: 556
     placeholder_text: '# TODO'
-  - offset: 2250
-    length: 35
-    placeholder_text: '# TODO'
-  - offset: 2652
-    length: 469
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Neighbors and Wine
-      task: Precision Recall
-      file: task.py
-      placeholder: 3
-      is_visible: false
-  - offset: 2331
-    length: 208
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Neighbors and Wine
-      task: Precision Recall
-      file: task.py
-      placeholder: 1
-      is_visible: false
 - name: tests/test_task.py
   visible: false
