@@ -3,4 +3,4 @@
 в методе `visualize_mnist`.
 
 Картинка должна выглядеть подобным образом:
-<img src="mnist.jpg"/>
+![MNIST](mnist.jpg)

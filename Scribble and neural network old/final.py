@@ -74,3 +74,8 @@ def sigmoid(x):
 
 def sigmoid_derivative(x):
     return sigmoid(x) * (1 - sigmoid(x))
+
+
+if __name__ == '__main__':
+    network = NeuralNetwork([10, 10, 10])
+    network.train()

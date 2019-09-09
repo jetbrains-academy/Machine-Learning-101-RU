@@ -3,8 +3,8 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 884
-    length: 85
+  - offset: 400
+    length: 1119
     placeholder_text: '# TODO'
     dependency:
       lesson: Scribble and neural network
@@ -12,14 +12,24 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 1159
-    length: 746
+  - offset: 2313
+    length: 102
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Scribble and neural network
+      task: Forward Step
+      file: task.py
+      placeholder: 2
+      is_visible: false
+  - offset: 2462
+    length: 872
+    placeholder_text: '# TODO'
+  - offset: 3439
+    length: 779
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
-- name: ../mnist.csv
-  visible: true
-- name: neuralnet.png
+- name: mnist.jpg
   visible: true
 - name: tests/test_task.py
   visible: false
