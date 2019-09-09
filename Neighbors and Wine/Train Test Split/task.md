@@ -27,4 +27,5 @@
 
 <br/>
 <br/>
-<img src="wine.jpg">
+
+![Wine](wine.jpg)

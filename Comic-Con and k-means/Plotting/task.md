@@ -13,4 +13,4 @@
 отнесенных к кластеру с индексом `i`.
 
 Пример гистограммы:
-<img src="barchart.png"/>
+![Histogram](barchart.png)
