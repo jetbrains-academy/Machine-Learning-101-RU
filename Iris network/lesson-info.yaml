@@ -2,4 +2,3 @@ type: framework
 content:
 - Forward Step
 - Backpropagation
-- Train and predict
