@@ -41,3 +41,6 @@ class NN:
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
     plot_data(X, y)
+    nn = NN(len(X[0]), 5, 1)
+    output = nn.feedforward(X)
+    print(output)
