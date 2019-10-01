@@ -20,7 +20,7 @@ files:
       task: Naive Bayes
       file: task.py
       placeholder: 2
-      is_visible: false
+      is_visible: true
 - name: __init__.py
   visible: true
 - name: spam.txt

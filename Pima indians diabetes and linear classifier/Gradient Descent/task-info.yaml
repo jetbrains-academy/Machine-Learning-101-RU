@@ -1,7 +1,7 @@
 type: edu
 files:
 - name: __init__.py
-  visible: true
+  visible: false
 - name: pima-indians-diabetes.csv
   visible: true
 - name: task.py
