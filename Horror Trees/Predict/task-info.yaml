@@ -7,7 +7,7 @@ files:
     length: 103
     placeholder_text: '# TODO'
     dependency:
-      lesson: Horror trees
+      lesson: Horror Trees
       task: Decision Tree
       file: task.py
       placeholder: 1
@@ -16,7 +16,7 @@ files:
     length: 127
     placeholder_text: '#TODO'
     dependency:
-      lesson: Horror trees
+      lesson: Horror Trees
       task: Decision Tree
       file: task.py
       placeholder: 2
@@ -25,7 +25,7 @@ files:
     length: 233
     placeholder_text: '# TODO'
     dependency:
-      lesson: Horror trees
+      lesson: Horror Trees
       task: Decision Tree
       file: task.py
       placeholder: 3
@@ -34,7 +34,7 @@ files:
     length: 158
     placeholder_text: '# TODO'
     dependency:
-      lesson: Horror trees
+      lesson: Horror Trees
       task: Decision Tree
       file: task.py
       placeholder: 4
@@ -43,7 +43,7 @@ files:
     length: 1126
     placeholder_text: '# TODO'
     dependency:
-      lesson: Horror trees
+      lesson: Horror Trees
       task: Decision Tree
       file: task.py
       placeholder: 5

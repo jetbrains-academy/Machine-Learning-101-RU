@@ -8,7 +8,7 @@ environment: unittest
 content:
 - Neighbors and Wine
 - Comic-Con and k-means
-- Horror trees
+- Horror Trees
 - Bayes guards SMS
 - Pima indians diabetes and linear classifier
 - Iris network
