@@ -22,7 +22,6 @@ def k_means(X, n_clusters, distance_metric):
     distance = np.zeros((n_clusters, n_samples))
 
     while True:
-        print("1")
         for i, c in enumerate(clusters):
             distance[i] = distance_metric(X, c)
         new_classification = np.argmin(distance, axis=0)

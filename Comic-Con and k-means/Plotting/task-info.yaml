@@ -25,7 +25,7 @@ files:
     length: 72
     placeholder_text: '# TODO'
 - name: __init__.py
-  visible: true
+  visible: false
 - name: superman-batman.png
   visible: true
 - name: tests/test_task.py

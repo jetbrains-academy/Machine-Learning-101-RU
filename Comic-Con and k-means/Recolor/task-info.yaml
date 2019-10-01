@@ -7,7 +7,7 @@ files:
     length: 66
     placeholder_text: '# read image from path'
     dependency:
-      lesson: Comic-Con и k-means
+      lesson: Comic-Con and k-means
       task: Plotting
       file: task.py
       placeholder: 1
@@ -34,7 +34,7 @@ files:
     length: 116
     placeholder_text: '# TODO'
 - name: __init__.py
-  visible: true
+  visible: false
 - name: superman-batman.png
   visible: false
 - name: tests/test_task.py
