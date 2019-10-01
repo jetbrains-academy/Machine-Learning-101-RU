@@ -25,6 +25,15 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
+  - offset: 719
+    length: 469
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Neighbors and Wine
+      task: Precision Recall
+      file: task.py
+      placeholder: 3
+      is_visible: false
   - offset: 1370
     length: 51
     placeholder_text: '# TODO'
@@ -46,14 +55,5 @@ files:
   - offset: 1876
     length: 377
     placeholder_text: '# TODO'
-  - offset: 719
-    length: 469
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Neighbors and Wine
-      task: Precision Recall
-      file: task.py
-      placeholder: 3
-      is_visible: false
 - name: tests/test_task.py
   visible: false

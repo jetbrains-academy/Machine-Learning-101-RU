@@ -1,5 +1,5 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 
@@ -9,7 +9,7 @@ def read_data(fpath):
     iris.loc[iris['species'] == 'versicolor', 'species'] = 1
     iris.loc[iris['species'] == 'setosa', 'species'] = 2
     iris = iris[iris['species'] != 2]
-    return iris[['petal_length', 'petal_width']].values.T, iris[['species']].values.T.astype('uint8')
+    return iris[['petal_length', 'petal_width']].values, iris[['species']].values.astype('uint8')
 
 
 def plot_data(X, y):
@@ -20,38 +20,40 @@ def plot_data(X, y):
     plt.show()
 
 
+def train_test_split(X, y, ratio=0.8):
+    indices = np.arange(X.shape[0])
+    np.random.shuffle(indices)
+    train_len = int(X.shape[0] * ratio)
+    return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
+
+
 def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x))
 
 
 def sigmoid_derivative(x):
-    return sigmoid(x) * (1 - sigmoid(x))
+    return x * (1.0 - x)
 
 
-class NeuralNetwork:
-    def __init__(self):
-        self.inputSize = 2
-        self.outputSize = 1
-        self.hiddenSize = 3
+class NN:
+    def __init__(self, input_size, hidden_size, output_size):
+        self.w1 = 2 * np.random.random((input_size, hidden_size)) - 1
+        self.w2 = 2 * np.random.random((hidden_size, output_size)) - 1
 
-        self.W1 = np.random.randn(self.inputSize, self.hiddenSize)  # (3x2) weight matrix from input to hidden layer
-        self.W2 = np.random.randn(self.hiddenSize, self.outputSize)  # (3x1) weight matrix from hidden to output layer
+    def feedforward(self, X):
+        self.layer1 = sigmoid(np.dot(X, self.w1))
+        return sigmoid(np.dot(self.layer1, self.w2))
 
-    def feedforward(self):
-        self.layer1 = sigmoid(np.dot(X, self.W1))  # activation function
-        return sigmoid(np.dot(self.layer1, self.W2))  # final activation function
-
-    def backward(self, X, y, output):
-        self.o_error = y - output
-        self.o_delta = self.o_error * sigmoid_derivative(output)
-
-        self.layer1_error = self.o_delta.dot(self.W2.T)
-        self.layer1_delta = self.layer1_error * sigmoid_derivative(self.layer1)
-
-        self.W1 += X.T.dot(self.layer1_delta)
-        self.W2 += self.layer1.T.dot(self.o_delta)
+    def backward(self, X, y, output, learning_rate=0.01):
+        l2_delta = (y - output) * sigmoid_derivative(output)
+        l1_delta = np.dot(l2_delta, self.w2.T) * sigmoid_derivative(self.layer1)
+        self.w2 += (np.dot(self.layer1.T, l2_delta) * learning_rate)
+        self.w1 += (np.dot(X.T, l1_delta) * learning_rate)
 
 
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
-    plot_data(X, y)
+    X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
+    nn = NN(len(X[0]), 5, 1)
+    output = nn.feedforward(X_train)
+    nn.backward(X_train, y_train, output)

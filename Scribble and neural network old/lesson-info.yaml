@@ -1,8 +1,0 @@
-type: framework
-content:
-- Get data
-- Visualize MNIST
-- Forward
-- Backpropagation
-- Predict
-- Evaluate

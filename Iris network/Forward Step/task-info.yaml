@@ -3,8 +3,8 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1206
-    length: 146
+  - offset: 1038
+    length: 94
     placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
@@ -13,7 +13,7 @@ files:
 - name: tests/__init__.py
   visible: false
 - name: iris.csv
-  visible: false
+  visible: true
 - name: neuralnet.png
   visible: false
 - name: neuron-scheme.png

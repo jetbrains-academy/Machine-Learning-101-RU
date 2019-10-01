@@ -20,6 +20,13 @@ def plot_data(X, y):
     plt.show()
 
 
+def train_test_split(X, y, ratio=0.8):
+    indices = np.arange(X.shape[0])
+    np.random.shuffle(indices)
+    train_len = int(X.shape[0] * ratio)
+    return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
+
+
 def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x))
 
@@ -37,7 +44,30 @@ class NN:
         self.layer1 = sigmoid(np.dot(X, self.w1))
         return sigmoid(np.dot(self.layer1, self.w2))
 
+    def backward(self, X, y, output, learning_rate=0.01):
+        l2_delta = (y - output) * sigmoid_derivative(output)
+        l1_delta = np.dot(l2_delta, self.w2.T) * sigmoid_derivative(self.layer1)
+        self.w2 += (np.dot(self.layer1.T, l2_delta) * learning_rate)
+        self.w1 += (np.dot(X.T, l1_delta) * learning_rate)
+
+    def train(self, X, y, n_iter=20000):
+        for itr in range(n_iter):
+            l2 = self.feedforward(X)
+            self.backward(X, y, l2)
+
+    def predict(self, X):
+        return self.feedforward(X)
+
+
+def evaluate(nn, X_test, y_test):
+    nn_y = nn.predict(X_test)
+    return ((nn_y > 0.5).astype(int) == y_test).sum() / len(y_test)
+
 
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
-    plot_data(X, y)
+    X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
+    nn = NN(len(X[0]), 5, 1)
+    nn.train(X_train, y_train)
+    print("Accuracy:")
+    print(evaluate(nn, X_test, y_test))
