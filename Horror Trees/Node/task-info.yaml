@@ -15,4 +15,4 @@ files:
 - name: halloween.csv
   visible: true
 - name: boo.jpg
-  visible: true
+  visible: false
