@@ -32,7 +32,7 @@ files:
       lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
-      placeholder: 6
+      placeholder: 3
       is_visible: false
   - offset: 1370
     length: 51
@@ -41,7 +41,7 @@ files:
       lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
-      placeholder: 3
+      placeholder: 4
       is_visible: false
   - offset: 1449
     length: 65
@@ -50,7 +50,7 @@ files:
       lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
-      placeholder: 4
+      placeholder: 5
       is_visible: false
   - offset: 1876
     length: 377
@@ -59,7 +59,7 @@ files:
       lesson: Pima indians diabetes and linear classifier
       task: Gradient Descent
       file: task.py
-      placeholder: 5
+      placeholder: 6
       is_visible: false
   - offset: 2684
     length: 556
