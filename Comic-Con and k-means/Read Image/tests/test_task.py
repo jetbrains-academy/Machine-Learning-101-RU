@@ -8,10 +8,10 @@ from ..task import read_image
 
 class TestCase(unittest.TestCase):
     def test_read_image(self):
-        image = read_image("./Read Image/tests/star.png")
-        expected_star = np.loadtxt("./Read Image/tests/star.txt")
+        image = read_image("./task/tests/star.png")
+        expected_star = np.loadtxt("./task/tests/star.txt")
         assert_array_equal(expected_star, image)
 
     def test_shape(self):
-        image = read_image("./Read Image/superman-batman.png")
+        image = read_image("./task/superman-batman.png")
         self.assertEqual((786432, 3), image.shape)
