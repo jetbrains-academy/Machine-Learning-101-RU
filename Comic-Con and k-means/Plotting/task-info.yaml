@@ -13,7 +13,7 @@ files:
       placeholder: 1
       is_visible: false
   - offset: 486
-    length: 471
+    length: 687
     placeholder_text: '# TODO'
     dependency:
       lesson: Comic-Con and k-means
@@ -21,7 +21,7 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 1032
+  - offset: 1248
     length: 72
     placeholder_text: '# TODO'
 - name: __init__.py

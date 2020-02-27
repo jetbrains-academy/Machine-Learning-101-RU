@@ -27,7 +27,12 @@ def k_means(X, n_clusters, distance_metric):
         classification = new_classification
         for i in range(n_clusters):
             mask = classification == i
-            clusters[i] = np.sum(X[mask], axis=0) / np.sum(mask)
+            total_classified = np.sum(mask)
+            is_empty_cluster = total_classified == 0
+            if not is_empty_cluster:
+                clusters[i] = np.sum(X[mask], axis=0) / total_classified
+            else:
+                clusters[i] = X[np.argmax(distance[i])]
     return classification, clusters
 
 
