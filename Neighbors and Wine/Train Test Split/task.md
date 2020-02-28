@@ -24,7 +24,7 @@
     len(X_train) / (len(X_test) + len(X_train)) == ratio
     len(y_train) / (len(y_test) + len(y_train)) == ratio
 
-
+На протяжении этого курса мы будем использовать пакет [NumPy](https://docs.scipy.org/doc/numpy-1.15.1/user/index.html). Для выполнения данного задания могут быть полезны функция [numpy.random.permutation](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.permutation.html), создающая случайную перестановку массива, и атрибут [numpy.ndarray.shape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html), позволяющий получить доступ к форме массива.
 <br/>
 <br/>
 
