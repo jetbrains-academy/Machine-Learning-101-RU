@@ -1,17 +1,14 @@
-A decision tree is built top-down from a root node and involves partitioning the data into subsets that contain instances
-with similar values (homogeneous).
+Решающее дерево строится сверху вниз, начиная с корневого узла. Данные разбиваются на подмножества, содержащие объекты со схожими признаками (гомогенные).
 
-Algorithm uses **entropy** to calculate the homogeneity of a sample. Entropy is measured between 0 and 1.
-If the sample is completely homogeneous the entropy is zero and if the sample is equally divided then it has entropy of one.
+Алгоритм использует **энтропию** (**entropy**) для определения гомогенности выборки. Энтропия может принимать значения от 0 до 1. Для абсолютно гомогенной выборки энтропия будет равна 0, для той же, которая может быть ровно разделена, она будет 1.
 
-The mathematical formula for Entropy is as follows:
+Энтропия вычисляется по следующей формуле:
 
 $$H = - \sum\limits_{i=1}^{C} p_i \log_2 p_i$$
 
-where $p_i$ -- the frequentist probability of an element/class $i$ in our data
+where $p_i$ -- частотная вероятность объекта или класса $i$ в наших данных
 
 
 ### Задание
 
-Реализуйте функцию `entropy`, вычисляющую энтропию для некоторого подмножества объектов. На вход функция получает массив
-меток объектов.
+Реализуйте функцию `entropy`, вычисляющую энтропию для некоторого подмножества объектов. На вход функция получает массив меток объектов.
