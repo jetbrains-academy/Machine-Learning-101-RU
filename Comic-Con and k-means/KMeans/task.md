@@ -1,35 +1,32 @@
 ### K-means
 
-K-means clustering is a type of unsupervised learning, which is used when the resulting groups in the data are unknown.
-The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.
+В данном уроке представлена задача кластеризации - разбиения выборки на непересекающиеся множества, объекты которых схожи между собой и отличаются от объектов других множеств. Центры подобных множеств будут определять цвета, на которые будут заменены их элементы на изображении.
 
-The algorithm works iteratively to assign each data point to one of K groups based on the features that are provided.
-Data points are clustered based on feature similarity.
+Алгоритм кластеризации с помощью k-средних (k-means algorithm) - вид обучения без учителя, применяемый в случае, если группы, получаемые в результате классификации (кластеры) неизвестны.
+Задача этого алгоритма - разбить выборку на `k` групп.
 
+Алгоритм итеративно присваивает каждый из объектов выборки одной из `k` групп, основываясь на предоставленных признаках. Кластеры образуются из объектов со схожими признаками.
 
-The Κ-means clustering algorithm uses iterative refinement to produce a final result.
-The algorithm inputs are the number of clusters Κ and the data set. The data set is a collection of features for each data point.
-The algorithms starts with initial estimates for the Κ centroids, which can either be randomly generated or randomly selected from the data set.
-The algorithm then iterates between two steps:
+В алгоритме применяется итеративное улучшение результата. На вход подаются количество кластеров и набор данных, содержащий признаки каждого из объектов (в данном случае - значения красного, синего и зеленого каналов для каждой из точек). Алгоритм начинает с первоначального определения `k` центроидов, которые могут быть сгенерированы случайно, или же наугад выбраны из входного набора данных. После этого итеративно повторяются два шага:
 
-1. Data assignment step. Each centroid defines one of the clusters. In this step, each data point is assigned to its nearest centroid.
-More formally,
+1. Шаг распределения объектов. На данном этапе каждому объекту присваивается кластер с ближайшим центроидом. Более формально:
 
 $$c_i = \underset{{c \in 1\dots k}}{\arg\min}  \rho(x_i, \mu_c)$$
 
-where
-- $c_i$ -- cluster center assigned to the $x_i$ data point
-- $\rho(x_i, \mu_c)$ -- distance between $x_i$ data point and $\mu_c$ cluster center
-- $\mu_{c}$ -- cluster center
+где
+- $c_i$ -- центр кластера, присвоенный объекту $x_i$
+- $\rho(x_i, \mu_c)$ -- расстояние между объектом $x_i$ и центром кластера $\mu_c$
+- $\mu_{c}$ -- центр кластера
 
-2. Centroid update step. In this step, the centroids are recomputed by taking the mean of all data points assigned to that centroid's cluster.
+2. Шаг обновления центроидов. На данном этапе происходит перерасчет центроидов как среднего среди точек, присвоенных их кластерам.
 
 $$ {\mu_{c} = \frac{\sum\limits_{j=1,\dots, n} [c_i = c] x_i^j}{\sum\limits_{c_i = c} 1} } $$
 
 
-The algorithm iterates between steps one and two until a stopping criteria is met
-(i.e., no data points change clusters, the sum of the distances is minimized, or some maximum number of iterations is reached).
-This algorithm is guaranteed to converge to a result.
+Алгоритм повторяет шаги один и два, пока не будет достигнуто условие останова: на какой-то итерпции ни один из объектов не изменит свой кластер, будет достигнута минимальная сумма расстояний или будет пройдено некое предельное количество итераций.
+При наличии данных условий алгоритм гарантированно сходится.
+
+Однако стоит учитывать, что на первом шаге может образоваться кластер, которому не принадлежит ни одна точка. Это может быть следствием неудачных изначальных центроидов или слишком большого k. Такие случаи необходимо отдельно обрабатывать на втором шаге, чтобы избежать ошибки при вычислении их среднего. Здесь возможны различные подходы, к примеру присвоение пустому кластеру случайной точки, или точки, наиболее удаленной от центра наибольшего кластера. 
 
 
 ### Задание
@@ -40,3 +37,4 @@ This algorithm is guaranteed to converge to a result.
 Результатом работы функции является пара из вектора размера `n_samples`, где в $i$-й ячейке содержится кластер,
 соответствующий $i$-му пикселю, и вектор размера `(n_clusters)` с центрами кластеров.
 
+При выполнении задания может пригодиться функция [numpy.sum](https://numpy.org/doc/1.18/reference/generated/numpy.sum.html), вычисляющая сумму элементов массива.
