@@ -1,33 +1,30 @@
-Now we need to transform the probability we want to calculate into something that can be calculated using word frequencies.
-For this, we will use some basic properties of probabilities, and <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes’ Theorem</a>.
+Теперь необходимо преобразовать вычисляемую вероятность в нечто, что можно вычислить использую частоту встречаемости слов. Для этого можно использовать некоторые базовые свойства вероятностей и [теорему Байеса](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%91%D0%B0%D0%B9%D0%B5%D1%81%D0%B0).
 
-Bayes’ Theorem is useful when working with conditional probabilities (like we are doing here), because it provides us with a way to reverse them:
+Теорема полезна при работе с условными вероятностями (например, в нашем случае), так как позволяет их обратить:
 
 $$P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$$
 
-In our case, we have $P(spam | sentence)$, so using this theorem we can reverse the conditional probability:
+В нашем случае имеется $P(spam | sentence)$, так что с помощью теоремы мы можем получить:
 
 $$P(spam|sentence) = \frac{P(sentence|spam) \times P(spam)}{P(sentence)}$$
 
-For our classifier we’re just trying to find out which tag has a bigger probability,
-we can discard the divisor — which is the same for both tags — and just compare:
+Для нашего классификатора мы лишь пытаемся определить наиболее вероятный тэг, так что мы можем пренебречь знаменателем, одинаковым для обоих тэгов, и сравнить числители:
 
 $$P(sentence|spam) \times P(spam)$$
 
-and
+и
 
 $$P(sentence|ham) \times P(ham)$$
 
-### Naive
+### Наивный
 
-Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.
-Hence it is called **naive**.
+Наивный Байесовский классификатор предполагает, что наличие какого-либо из признаков не связано с наличием остальных, в связи с чем его и называют наивным (**naive**).
 
 В нашем случае это означает, что вероятность встретить некоторое слово в сообщении не зависит от наличия других слов в этом сообщении.
 
 $$P(\text{Who let the dogs out}) = P(\text{Who}) \times P(\text{let}) \times P(\text{the}) \times P(\text{dogs}) \times P(\text{out})$$
 
-Calculating a probability is just counting in our training data.
+В нашей обучающей выборке вычисление вероятности сводится к подсчету. 
 
 
 ### Задание
