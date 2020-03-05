@@ -1,67 +1,67 @@
-The iris data is the most commonly used data set for testing machine learning algorithms.
-The data contains four features — sepal length, sepal width, petal length,
-and petal width for the different species (versicolor, virginica and setosa) of the flower, iris.
-Also, for each species there are 50 instances (rows of data).
+Ирисы Фишера (**ирисы Андерсона**, **the iris data**) - наиболее распространенный датасет для тестирования алгоритмов машинного обучения. Данные срдержат 4 признака:
+- длину наружной доли околоцветника (чашелистика)
+- ширину наружной доли околоцветника (чашелистика)
+- длину внутренней доли околоцветника (лепестка)
+- ширину внутренней доли околоцветника (лепестка)
+для различных видов цветков ириса - щетинистого, вергинского и разноцветного. Для каждого вида представлено по 50 экземпляров.
 
-We will build a classification model on this data using neural network.
-For simplicity we'll use only ‘Versicolor’ and ‘Virginica’ species and ‘petal length’ and ‘petal width’ as the features.
+Мы построим классификационную модель на основе этих данных, используя нейронную сеть. Для простоты мы будем использовать лишь длину и ширину лепестков разноцветного и вергинского видов ириса.
 
 ### Neuron
 
-The basic unit of a neural network is a neuron.
-A neuron takes inputs, does some math with them, and produces one output.
+Структурной единицей нейронной сети является нейрон.
+Нейрон получает входные данные, производит над ними некие математические преобразования и выдает единый результат.
 
 ![Neuron scheme](neuron-scheme.png)
 
-First, neuron adds up the value of every input. On the figure, there are $n$ inputs ($x^1, x^2, \dots x^n$ ) coming to the neuron.
+Сначала нейрон складывает значения всех входных данных. На изображении представлены $n$ входных сигналов ($x^1, x^2, \dots x^n$ ).
 
-This value is multiplied, before being added, by another variable called “weight” ($w_1, w_2, \dots w_n$).
-Weights are the only values that will be modified during the learning process. A bias value $b$ may be added to the total value calculated.
+Эти значения перед сложением умножаются на весовые коэффициенты (**weight**) ($w_1, w_2, \dots w_n$).
+Веса - единственные значения, которые будут изменены в процессе обучения. Смещение $b$ может быть добавлено к полученному выходному значению для корректировки.
 
-After all those summations, the neuron finally applies a function called “activation function” $\sigma$ to the obtained value.
-Activation function usually serves to turn the total value calculated before to a number between `0` and `1`.
+После сложения входных данных, нейрон применяет к полученному значению функцию активации (**activation function**) $\sigma$.
+Функция активации обычно предназначена для того, чтобы нормировать вычисленное ранее значение между `0` и `1`.
 
-A commonly used activation function is the [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function) function.
+Зачастую в качестве функции активации используется [сигмоида](https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%B3%D0%BC%D0%BE%D0%B8%D0%B4%D0%B0) (**sigmoid function**).
 
-The mathematical formula for the neuron output is as follows:
+Формула для выходных данных нейрона:
 
 $$a = \sigma(\sum\limits_{j=1}^n w_j x^j + b)$$
 
-### Neural network
+### Нейронная сеть
 
-A neural network is nothing more than a bunch of neurons connected together.
+Нейронная сеть - всего лишь совокупность нейронов, соединенных вместе.
 
-Neural Networks consist of the following components:
-- An input layer
-- An arbitrary amount of hidden layers
-- An output layer
-- A set of weights and biases between each layer, $W$
-- A choice of activation function for each hidden layer $\sigma$
+Нейронные сети состоят из следующих частей:
+- Слой входных нейронов (**input layer**)
+- Произвольное количество скрытых нейронов (**hidden layer**)
+- Слой выходных нейронов (**output layer**)
+- Набор весов и смещений между слоями, $W$
+- Выбора функции активации для каждого из скрытых слоев $\sigma$
 
-Here is 2-layer Neural Network. The input layer is excluded when counting the number of layers in a Neural Network.
+Ниже представлена 2-слойная нейронная сеть. При подсчете количества слоев слой входных нейронов не учитывается.
 ![Neuralnet](neuralnet.png)
 
 
-### Training the Neural Network
-The output $\hat{y}$ of a simple 2-layer Neural Network is:
+### Обучение нейронной сети
+Выходные данные $\hat{y}$ простой 2-слойной нейронной сети:
 $$\hat{y} = \sigma(W_2 \sigma(W_1x + b_1) + b_2$$
 
-Weights $W$ and the biases $b$ are the only variables that affects the output \hat{y}.
-The right values for the weights and biases determines the strength of the predictions.
-The process of fine-tuning the weights and biases from the input data is known as training the Neural Network.
+Веса $W$ и смещения $b$ - единственные параметры, влияющие на выходные данные $\hat{y}$.
+Правильные значения весов и смещений определяют корректность прогнозов.
+Процесс настройки весов и смещений известен как обучение нейронной сети.
 
-Each iteration of the training process consists of the following steps:
-- Calculating the predicted output, known as feedforward
-- Updating the weights and biases, known as backpropagation
+Каждая итерация обучающего процесса состоит из следующих шагов:
+- Вычисление предсказания для выходных данных, известного как "упреждение" или же "прямая связь" (**feedforward**)
+- Обновление весов и смещений, известное как "обратное распространение ошибки" (**backpropagation**)
 
-### Feedforward
+### Прямая связь
 
-Feedforward is just simple calculus and for a basic 2-layer neural network,
-the output of the Neural Network is:
+Прямая связь - обычные вычисления, и для простой 2-слойной нейронной сети выходные данные будут выглядеть следующим образом:
 
 $$\hat{y} = \sigma(W_2 \sigma(W_1x + b_1) + b_2$$
 
 ### Задание
 
-Implement `feedforward` function. Let's assume the biases to be 0 for simplicity.
+Реализуйте функцию `feedforward`. Для простоты предположим смещения равными 0.
 
