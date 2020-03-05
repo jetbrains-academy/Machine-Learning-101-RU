@@ -1,53 +1,48 @@
-Since we have a random set of weights, we need to alter them to make our inputs equal to the corresponding outputs from our data set.
-This is done through a method called backpropagation.
+Так как мы имеем случайный набор весов, необходимо изменить его так, чтобы входные данные из датасета совпадали с соответствующими выходными после преобразования.
+Это осуществляется с помощью процедуры обратной связи.
 
-Backpropagation works by using a loss function to calculate how far the network was from the target output.
+Обратная связь работает за счет функции потерь, показывающей, насколько далеко сеть была от целевого результата.
 
-### Loss
+### Потери
 
-One way of representing the loss function is by using the sum squared loss function:
+Один из способов вычисления функции потерь - использование суммарной квадратичной ошибки (sum square loss function:
 
 $$Loss(y, \hat{y}) = \sum\limits_{i=1}^{n} (y_i - \hat{y}_i) ^ 2$$
 
-where $\hat{y}$ - predicted output
+где $\hat{y}$ - предсказанные выходные данные
 
-$y$ - actual output
+$y$ - реальные выходные данные
 
-Sum-of-squares error is simply the sum of the difference between each predicted value and the actual value.
-The difference is squared so that we measure the absolute value of the difference.
+Сумма квадратов ошибок (**sum-of-squares error**, **SSE**) - сумма разностей между каждым спрогнозированным значением и реальными данными. Разность возведена в квадрат, чтобы оперировать ее абсолютным значением.
 
-Our goal in training is to find the best set of weights and biases that minimizes the loss function.
+Задача обучения - найти наилучший набор весов и смещений, минимизирующий функцию потерь.
 
-In order to know the appropriate amount to adjust the weights and biases by, we need to know the derivative of the loss
-function with respect to the weights and biases.
+Для того чтобы знать, насколько необходимо изменить веса и смещения, необходимо узнать зависимость производной функции потерь от них.
 
-Recall from the previous lesson (Gradient Descent) that the derivative of a function is simply the slope of the function.
-If we have the derivative, we can simply update the weights and biases by increasing/reducing with it.
+В одном из предыдущих уроков (**Градиентный спуск**, **Gradient Descent**) описывалось, что производная это наклон функции. Если известна производная, можно обновлять веса и смещения, увеличивая или уменьшая их с ее помощью.
 
-However, we can’t directly calculate the derivative of the loss function with respect to the weights and biases because
-the equation of the loss function does not contain the weights and biases. Therefore, we need the chain rule to help us calculate it.
+Тем не менее, невозможно просто вычислить данную зависимость, так как уравнение функции потерь не содержит в себе ни весов, ни смещений. Для подобных вычислений необходимо определить некое связующее правило.
 
 $$\frac {\partial Loss(y, \hat{y})}{\partial W} =  \frac { \partial Loss(y, \hat{y} ) } {\partial \hat{y}}
 \frac { \partial \hat{y} } {\partial z} \frac { \partial z } {\partial W} $$
 
 $$= 2 (y - \hat{y} ) * z (1- z) * x$$
 
-where $z = Wx + b$
+где $z = Wx + b$
 
-Here’s how we will calculate the incremental change to our weights:
+Вот каким образом можно вычислить прирост весов:
 
-- Find the margin of error of the output layer by taking the difference of the predicted output and the actual output
+- Найти предел ошибки выходного слоя как разницу предсказанных выходных данных и реальных
 
-- Apply the derivative of our sigmoid activation function to the output layer error. Let's call this result the delta output sum.
+- Применить производную сигмоидальной функции активации к ошибке выходных данных. Назовем результат дельтой выходной суммы (**delta output sum**).
 
-- Use the delta output sum of the output layer error to figure out how much our hidden layer contributed to the output error by
-performing a dot product with our second weight matrix. We can call this the layer1 error.
+- Используя дельту выходной суммы определим, насколько скрытый слой влияет на ошибку в выходных данных, умножив ее векторно со второй матрицей весов. Назовем это layer1 ошибкой.
 
-- Calculate the delta output sum for the layer1 by applying the derivative of our sigmoid activation function.
+- Вычислить delta output sum для layer1, применив производную нашей сигмоидальной активационной функции.
 
-- Adjust the weights for the first layer by performing a dot product of the input layer with the hidden delta output sum.
-For the second layer, perform a dot product of the hidden layer and the output delta output sum.
+- Скорректировать весовые коэффициенты с помощью векторного произведения входного слоя со скрытой delta output sum.
+Для второго слоя вычислить векторное произведение скрытого слоя и delta output sum.
 
 ### Задание
 
-Implement backward propagation function that does everything specified in the four steps above.
+Реализуйте **backward propagation** функцию, которая производит операции, описанные выше.
