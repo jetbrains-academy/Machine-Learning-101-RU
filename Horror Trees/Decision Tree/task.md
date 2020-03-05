@@ -1,16 +1,12 @@
 ### ID3
 
-The core algorithm for building decision trees is called ID3.
-The ID3 algorithm is run recursively on the non-leaf branches, until all data is classified.
+Основной алгоритм построения решающих деревьев называется [ID3](https://en.wikipedia.org/wiki/ID3_algorithm). ID3 рекурсивно проходит по всем ветвям, не являющемся листьями, пока не классифицирует все данные.
 
-1. Calculate entropy of the target.
-2. The dataset is then split on the different attributes. The entropy for each branch is calculated.
-Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy
-before the split. The result is the Information Gain, or decrease in entropy.
-3. Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and
-repeat the same process on every branch.
-4. - A branch with entropy of 0 is a leaf node.
-   - A branch with entropy more than 0 needs further splitting.
+1. Вычислите энтропию цели.
+2. Затем датасет разбивается по различным признакам. Для каждой из ветвей вычисляется энтропия. Они пропорционально складываются в полную энтропию разбиения. Она вычитается из энтропии до разбиения, что в результате дает количество полученной информации, или же уменьшение энтропии.
+3. Признак с наибольшим количеством получаемой информации становится решающим узлом, датасет делится на ветви согласно обладанию объектов данным признаком, процесс повторяется для каждой ветви.
+4. - Ветвь с энтропией 0 является листом.
+   - Ветвь с энтропией больше 0 требует дальнейшего деления.
 
 
 ### Задание
