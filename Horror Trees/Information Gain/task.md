@@ -1,15 +1,11 @@
 ####Information Gain
-
-The information gain is based on the decrease in entropy after a dataset is split on an attribute.
-Constructing a decision tree is all about finding attribute that returns the highest information gain.
+Количество получаемой информации (**Information Gain**) основано на уменьшении энтропии после разбиения выборки по тому или иному признаку. Построение решающих деревьев заключается в нахождении признака, дающего наибольшее количество информации (иными словами, гомогенных ветвей).
 
 $$IGain = H(parent) - H(children) $$
 
-We simply subtract the entropy of `Y` given `X` from the entropy of just `Y` to calculate the reduction of uncertainty about
-`Y` given an additional piece of information `X` about `Y`.
+Мы вычитаем энтропию `Y` при условии `X` из энтропии `Y` для вычисления уменьшения неопределенности
+`Y`, при условии наличия дополнительного знания `X` про `Y`.
 
-Constructing a decision tree is all about finding attribute that returns the highest information gain
-(i.e., the most homogeneous branches).
 
 ### Задание
 
