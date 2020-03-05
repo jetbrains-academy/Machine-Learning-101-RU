@@ -2,9 +2,7 @@
 В файле `halloween.csv` находится датасет, содержащий информацию, которая поможет нам научиться отличать призраков,
 гоблинов и гулей друг от друга. Значения колонок указаны в заголовке файла, в качестве меток классов будет использоваться последняя колонка.
 
-Decision tree builds classification models in the form of a tree structure.
-It breaks down a dataset into smaller subsets with increase in depth of tree.
-The final result is a tree with decision nodes and leaf nodes.
+Решающие деревья строят классификационные модели в виде древовидной структуры. Датасет разбивается на меньшие подмножества, распределенные по дереву. Результатом будет структура, состоящая из решающих и листовых узлов.
 
 ## Задание
 
