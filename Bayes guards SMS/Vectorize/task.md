@@ -1,15 +1,12 @@
-In this lesson we're going to implement Naive Bayes Classifier to detect spam in SMS.
+В данном уроке мы создадим наивный [байесовский классификатор](http://www.machinelearning.ru/wiki/index.php?title=%D0%9D%D0%B0%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B0%D0%B9%D0%B5%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80) (**Naive Bayes classifier**) для определения спама в СМС сообщениях.
 
-A Naive Bayes classifier is a probabilistic machine learning model that’s used for classification task.
-This classifier is based on the <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes theorem</a>:
+Наивный байесовский классификатор - простая вероятностная модель машинного обучения, используемая в задачах классификации. Он основан на [теореме Байеса](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%91%D0%B0%D0%B9%D0%B5%D1%81%D0%B0):
 
 $$P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$$
 
-Naive Bayes is a probabilistic model, which means that it calculates the probability of each tag for a given text,
-and then output the tag with the highest one.
+Наивный классификатор - вероятностная модель, что означает, что он вычисляет вероятность каждого из тэгов для данного текста и возвращает наиболее вероятный.
 
-In our task we want to calculate the probability that the sentence is "Spam" and the probability that it’s "Ham".
-Then, take the largest one.
+Нашей задачей будет вычислить вероятности того, что предложение это "Spam" или "Ham". Затем выбрать наиболее вероятный вариант.
 
 $P(Spam | sentence)$ — the probability that the tag of a sentence is "Spam" given the particular sentence.
 
@@ -22,11 +19,15 @@ $P(Spam | sentence)$ — the probability that the tag of a sentence is "Spam" gi
 Для этого воспользуемся стандартной моделью для текстов под названием
 [Bag of words](https://en.wikipedia.org/wiki/Bag-of-words_model).
 
-We need numerical features as input for our classifier. So an intuitive choice would be word frequencies, i.e.,
-counting the occurrence of every word in the document ignoring word order and sentence construction.
+Она вычисляет количество вхождений каждого слова в документе, независимо от порядка слов и построения предложений.
 
 Реализуйте функцию `vectorize`, принимающую на вход вектор
 строк длины N и возвращающую пару из словаря (построенного на основе входных данных) и матрицы размера ($N$, $M$),
 где $M$ -- размер словаря.
 В качестве словаря будем использовать все слова, которые встречаются в переданном массиве.
 В каждой строке матрицы на $j$-й позиции находится число $x$, которое означает, что $j$-е слово встретилось в сообщении $x$ раз.
+
+В данном задании могут полезны следующие функции:
+- [numpy.core.defchararray.array](https://numpy.org/doc/1.18/reference/generated/numpy.core.defchararray.array.html) позволяет создать массив из строк, игнорирую пробелы при сравнении элементов.
+- [numpy.chararray.translate](https://numpy.org/doc/1.18/reference/generated/numpy.chararray.translate.html) позволяет преобразовать строку, применяя к каждому символу заданное преобразование.
+- [str.maketrans](https://docs.python.org/3/library/stdtypes.html#str.maketrans) возвращает таблицу перевода символов (**translation table**).
