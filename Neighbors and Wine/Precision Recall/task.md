@@ -45,4 +45,5 @@ $$
     n_classes = len(np.unique(y_test))
 </code>
 </pre>
+Здесь используется функция <a href="https://numpy.org/doc/1.18/reference/generated/numpy.unique.html">numpy.unique</a>, возвращающая все уникальные элементы массива, переданного в качестве аргумента. 
 </div>
