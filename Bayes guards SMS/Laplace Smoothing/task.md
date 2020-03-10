@@ -1,17 +1,12 @@
-
-The problem with the naive approach is following:
+Одна из проблем с наивным подходом заключается в следующем:
 
 Если какое-то слово не встречалось в тренировочной выборке класса Spam, то его вероятность $P(word | Spam) = 0$.
 
+Проблема с основанной на частоте встречаемости вероятностью равной 0 в том, что она скроет информацию обо всех остальных вероятностях.
 
-It is problematic when a frequency-based probability is zero, because it will wipe out all the information in the other probabilities.
+Одним из возможных решений является [аддитивное сглаживание](https://en.wikipedia.org/wiki/Laplace_smoothing), или же **сглаживание Лапласа** - техника, позволяющая сгладить категорические данные. Небольшая корректирующая выборка встраивается в каждую вычисляемую вероятность.
 
-A solution would be <a href="https://en.wikipedia.org/wiki/Laplace_smoothing">Laplace smoothing</a>,
-which is a technique for smoothing categorical data.
-A small-sample correction, or pseudo-count, will be incorporated in every probability estimate.
-
-We add 1 to every count so it’s never zero. To balance this, we add the number of possible words to the divisor,
-so the division will never be greater than 1.
+Добавим к каждому количеству слов 1, чтобы оно никогда не равнялось 0. В противовес этому добавим количество возможных слов к знаменателю, чтобы результат деления никогда не превышал единицы.
 
 ### Задание
 
