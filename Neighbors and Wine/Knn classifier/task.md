@@ -1,5 +1,4 @@
-The K Nearest Neighbors (KNN) algorithm assumes that similar things exist in close proximity. In other words, similar
-things are near to each other.
+Метод ближайших соседей (k-nearest neighbours) исходит из предположения, что схожие объекты расположены вблизи друг друга. Иными словами, что классифицируемый объект относится к тому классу, которому принадлежат ближайшие к нему объекты обучающей выборки.
 
 
 Классификатор k-nearest neighbors не предполагает отдельной процедуры обучения, классификация
@@ -21,3 +20,8 @@ things are near to each other.
 Выходом функции является вектор `y_test`, в котором для каждого
 элемента `X_test` хранится соответствующий ему класс.
 
+
+В данном задании могут быть полезны такие функции **NumPy**, как:
+- [numpy.argpartition](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argpartition.html), возвращающая все аргументы элементов массива меньшие заданного элемента в массиве перед ним, а большие - после него.
+- [numpy.bincount](https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html) возвращает количество каждого из элементов в массиве неотрицательных чисел.
+- [numpy.argmax](https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html) возвращает индексы наибольших значений.
