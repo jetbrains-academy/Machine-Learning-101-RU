@@ -1,28 +1,25 @@
-Gradient Descent is an optimization algorithm that helps machine learning models converge at a minimum value through repeated steps.
+Градиентный спуск - алгоритм оптимизации, позволяющий моделям машинного обучения сходится к минимальным значениям при помощи повторяющихся шагов.
 
-Loss function measures how bad our model performs compared to actual occurrences.
-Hence, it only makes sense that we should reduce this loss.
+Функция потерь измеряет, насколько плохо наша модель справляется в сравнении с реальными данными. Таким образом нашей задачей является эти потери сократить.
 
-The gradient (or derivative) tells us the incline or slope of the loss function.
-Hence, to minimize the loss function, we move in the direction opposite to the gradient.
+Градиент (или же производная) показывает уклон функции потерь. Таким образом, для минимизации потерь, нам необходимо двигаться в сторону, противоположную градиенту.
 
-A simple gradient Descent Algorithm is as follows:
-- Initialize the weights $\vec{w}$ randomly.
+Вот как выглядит простой алгоритм градиентного спуска:
+- Задать изначальные значения весов $\vec{w}$ случайным образом.
 
-- Calculate the cost function $$Q(\vec{w}) = \sum\limits_{i \in \text{training set}} L(M_i(\vec{w}))$$
-where $M_i(\vec{w}) = \langle \vec{w}, \vec{x}_i\rangle y_i$
+- Вычислить функцию стоимости $$Q(\vec{w}) = \sum\limits_{i \in \text{training set}} L(M_i(\vec{w}))$$
+где $M_i(\vec{w}) = \langle \vec{w}, \vec{x}_i\rangle y_i$
 
-- Calculate the gradients $\bigtriangledown Q(\vec{w})$ of cost function.
+- Вычислить градиенты $\bigtriangledown Q(\vec{w})$ функции стоимости.
 $\bigtriangledown Q(\vec{w}) = (\frac{\partial Q(\vec{w})}{\partial w_j} )_{j=0}^n
 = \sum \mathcal{L}'(\langle \vec{w}, \vec{x}_i \rangle y_i) \vec{x}_i y_i$
 
-- Update the weights by an amount proportional to G, i.e.
+- Обновить значения весов пропорционально значению G, т.е.
 $$\vec{w} = \vec{w} - \alpha \bigtriangledown Q(\vec{w})$$
-- Repeat until the cost $Q(w)$ stops reducing, or some other pre-defined termination criteria is met.
+- Повторять до тех пор, пока $Q(w)$ не перестанет уменьшаться, или же не будет достигнуто иное заранее заданное условие останова.
 
-In step 3, $\alpha$ is the learning rate which determines the size of the steps we take to reach a minimum.
-We need to be very careful about this parameter. High values of $\alpha$ may overshoot the minimum, and very low values will
-reach the minimum very slowly.
+В третьем шаге, $\alpha$ - скорость обучения, определяющая размер шагов, необходимых для достижения минимума.
+Стоит с большой осторожностью настраивать данный параметр - слишком большие значения $\alpha$ приведут к тому, что мы "перескочим" минимум, маленькие же будут способствовать медленному его достижению.
 
 
 ### Задание
@@ -34,3 +31,4 @@ reach the minimum very slowly.
 В качестве критерия остановки следует использовать отсечку `threshold` на расстояние между векторами весов на текущей и
 предыдущей итерациях. Расстояние можно выбрать любое, например, Евклидово или `l1`.
 
+В данном задании может быть полезна функция [numpy.linalg.norm](https://numpy.org/doc/1.18/reference/generated/numpy.linalg.norm.html), вычисляющая нормы матриц.
