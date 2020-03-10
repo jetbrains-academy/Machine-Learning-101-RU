@@ -1,12 +1,10 @@
-Stochastic gradient descent (SGD) computes the gradient for each update using a single training data point $x_i$ (chosen at random).
-The idea is that the gradient calculated this way is a stochastic approximation to the gradient calculated using the entire training data.
-Each update is now much faster to calculate than in batch gradient descent, and over many updates,
-we will head in the same general direction.
+Стохастический градиентный спуск (**SGD**) вычисляет градиент для каждого обновления используя лишь один обучающий объект $x_i$ (выбранный случайно).
+Идея подобных вычислений в том, что градиент вычисленный таким образом является стохастическим приближением градиента вычисленного на всей обучающей выборке.
+Каждое обновление таким образом можно вычислить гораздо быстрее, чем при групповом градиентном спуске, а по совокупности многих обновлений алгоритм будет двигаться в основном в том же направлении.
 
-In Stochastic mini-batch gradient descent, we calculate the gradient for each small mini-batch of training data.
-That is, we first divide the training data into small batches (say k samples per batch).
-We perform one update per mini-batch. $k$ is usually in the range 30–500, depending on the problem.
+В стохастическом градиентном спуске на основе небольшого количества образцов (**Stochastic mini-batch gradient descent**) вычисляется градиент для каждой небольшой группы объектов из тренировочных данных.
 
+Для начала обучающая выборка делится на небольшие группы (к примеру, по `k` элементов). Обновление происходит для каждой подобной группы. В зависимости от задачи, `k` обычно принимает значения от 30 до 500.
 ### Задание
 
 Реализуйте метод стохастического градиентного спуска для обучения линейного классификатора.
@@ -14,7 +12,7 @@ We perform one update per mini-batch. $k$ is usually in the range 30–500, depe
 
 Как и в случае с `GradientDescent` метод `fit` должен
 возвращать значения $Q$ на каждой итерации.
-Чтобы оценить $Q$ на каждой итерации воспользуйтесь формулой
+Чтобы оценить $Q$ на каждой итерации, воспользуйтесь формулой
 $$Q = (1 − \eta)Q + \eta L_i$$
 
 Значение $\eta \in [0, 1]$,
