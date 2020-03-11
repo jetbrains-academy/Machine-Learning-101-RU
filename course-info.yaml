@@ -1,8 +1,8 @@
-title: Machine Learning 101
-language: English
+title: Введение в машинное обучение
+language: Russian
 summary: |-
-  Introductory Machine Learning course.
-  This course was originally developed for the Machine Learning course in Academic University, St. Petersburg, Russia.
+  Курс посвящен азам машинного обучения.
+  Изначально курс был разработан в рамках программы изучения Машинного обучения в Академическом университете, Санкт-Петербург, Россия.
 programming_language: Python
 environment: unittest
 content:
