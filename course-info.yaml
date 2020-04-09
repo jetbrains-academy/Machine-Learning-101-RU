@@ -6,6 +6,7 @@ summary: |-
 programming_language: Python
 environment: unittest
 content:
+- О курсе
 - Neighbors and Wine
 - Comic-Con and k-means
 - Horror Trees
