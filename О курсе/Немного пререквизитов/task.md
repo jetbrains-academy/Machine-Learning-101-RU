@@ -13,5 +13,5 @@
  * Базовое знание языка Python - его можно изучить в [JetBrains Academy](https://hyperskill.org/onboarding/?track=python) или же пройдя курс [Introduction to Python](https://stepik.org/course/238/promo).
  * Основы линейной алгебры. В курсе будут приведены формулы наподобие данной: 
  $$ {\mu_{c} = \frac{\sum\limits_{j=1,\dots, n} [c_i = c] x_i^j}{\sum\limits_{c_i = c} 1} } $$
- При возникновении сложностей с подобными материалами рекомендуем параллельно изучить недостающие разделы, к примеру можно поискать необходимую информацию в курсе [Computer Science центра](https://stepik.org/course/91/promo).
+ При возникновении сложностей рекомендуем параллельно изучить недостающие разделы, к примеру можно поискать необходимую информацию в курсе [Computer Science центра](https://stepik.org/course/91/promo).
  
