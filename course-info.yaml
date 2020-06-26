@@ -7,7 +7,7 @@ programming_language: Python
 environment: unittest
 content:
 - О курсе
-- Why do we study ML
+- Зачем изучать машинное обучение
 - Neighbors and Wine
 - Comic-Con and k-means
 - Horror Trees
