@@ -1,6 +1,0 @@
-type: framework
-content:
-- Train Test Split
-- Knn classifier
-- Precision Recall
-- Leave One Out
