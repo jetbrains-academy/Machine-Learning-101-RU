@@ -7,7 +7,8 @@ programming_language: Python
 environment: unittest
 content:
 - О курсе
-- Neighbors and Wine
+- Зачем изучать машинное обучение
+- Соседи и Вино
 - Comic-Con and k-means
 - Horror Trees
 - Bayes guards SMS
