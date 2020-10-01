@@ -1,3 +1,3 @@
 if __name__== "__main__":
-    # Write your solution here
+    # You can try writing a Python code here
     pass
