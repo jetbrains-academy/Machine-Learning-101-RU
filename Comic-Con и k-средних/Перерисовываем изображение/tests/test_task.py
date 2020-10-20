@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from ..task import recolor
+from task import recolor
 
 
 class TestCase(unittest.TestCase):

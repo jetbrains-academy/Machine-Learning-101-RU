@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from numpy.testing import assert_array_equal
 
-from ..task import centroid_histogram
+from task import centroid_histogram
 
 
 class TestCase(unittest.TestCase):

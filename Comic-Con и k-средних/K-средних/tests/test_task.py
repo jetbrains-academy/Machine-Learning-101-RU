@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from numpy.testing import assert_array_equal
 
-from ..task import k_means, euclidean_distance
+from task import k_means, euclidean_distance
 from .. import task
 
 

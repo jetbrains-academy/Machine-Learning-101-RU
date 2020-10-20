@@ -1,6 +1,6 @@
 from numpy.ma.testutils import assert_array_equal, fail_if_array_equal
 
-from ..task import train_test_split
+from task import train_test_split
 import unittest
 import numpy as np
 

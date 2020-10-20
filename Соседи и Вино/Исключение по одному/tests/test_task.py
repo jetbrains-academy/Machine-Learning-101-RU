@@ -1,6 +1,6 @@
 import unittest
 
-from ..task import euclidean_dist, loocv
+from task import euclidean_dist, loocv
 
 import numpy as np
 
