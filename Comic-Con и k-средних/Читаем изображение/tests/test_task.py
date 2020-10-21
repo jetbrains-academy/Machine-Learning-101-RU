@@ -13,5 +13,5 @@ class TestCase(unittest.TestCase):
         assert_array_equal(expected_star, image)
 
     def test_shape(self):
-        image = read_image("./task/superman-batman.png")
+        image = read_image("./superman-batman.png")
         self.assertEqual((786432, 3), image.shape)
