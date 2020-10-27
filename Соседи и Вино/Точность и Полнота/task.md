@@ -48,4 +48,4 @@ $$
 </pre>
 </div>
 
-Здесь используется функция [numpy.unique]<a href="https://numpy.org/doc/1.18/reference/generated/numpy.unique.html">numpy.unique</a>, возвращающая все уникальные элементы массива. С помощью нее мы получаем список всех классов, представленных в выборке.
+Здесь используется функция [numpy.unique](https://numpy.org/doc/1.18/reference/generated/numpy.unique.html), возвращающая все уникальные элементы массива. С помощью нее мы получаем список всех классов, представленных в выборке.
