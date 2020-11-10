@@ -7,8 +7,8 @@ files:
     length: 66
     placeholder_text: '# read image from path'
     dependency:
-      lesson: Comic-Con and k-means
-      task: Read Image
+      lesson: Comic-Con и k-средних
+      task: Читаем изображение
       file: task.py
       placeholder: 1
       is_visible: false

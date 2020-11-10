@@ -7,7 +7,7 @@ files:
     length: 66
     placeholder_text: '# read image from path'
     dependency:
-      lesson: Comic-Con and k-means
+      lesson: Comic-Con и k-средних
       task: Recolor
       file: task.py
       placeholder: 1
@@ -16,7 +16,7 @@ files:
     length: 687
     placeholder_text: '# TODO'
     dependency:
-      lesson: Comic-Con and k-means
+      lesson: Comic-Con и k-средних
       task: Recolor
       file: task.py
       placeholder: 2
@@ -25,7 +25,7 @@ files:
     length: 72
     placeholder_text: '# TODO'
     dependency:
-      lesson: Comic-Con and k-means
+      lesson: Comic-Con и k-средних
       task: Recolor
       file: task.py
       placeholder: 3
@@ -34,7 +34,7 @@ files:
     length: 112
     placeholder_text: '# TODO'
     dependency:
-      lesson: Comic-Con and k-means
+      lesson: Comic-Con и k-средних
       task: Recolor
       file: task.py
       placeholder: 4

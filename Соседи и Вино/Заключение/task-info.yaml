@@ -7,7 +7,7 @@ files:
     length: 189
     placeholder_text: '# implement train_test_split function'
     dependency:
-      lesson: Neighbors and Wine
+      lesson: Соседи и Вино
       task: Leave One Out
       file: task.py
       placeholder: 1
@@ -16,7 +16,7 @@ files:
     length: 222
     placeholder_text: '# implement k-nearest neighbors classifier'
     dependency:
-      lesson: Neighbors and Wine
+      lesson: Соседи и Вино
       task: Leave One Out
       file: task.py
       placeholder: 2
@@ -25,7 +25,7 @@ files:
     length: 469
     placeholder_text: '# implement precision/recall'
     dependency:
-      lesson: Neighbors and Wine
+      lesson: Соседи и Вино
       task: Leave One Out
       file: task.py
       placeholder: 3
@@ -34,7 +34,7 @@ files:
     length: 420
     placeholder_text: '# implement optimal k search using leave one out'
     dependency:
-      lesson: Neighbors and Wine
+      lesson: Соседи и Вино
       task: Leave One Out
       file: task.py
       placeholder: 4

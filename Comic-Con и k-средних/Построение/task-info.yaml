@@ -7,8 +7,8 @@ files:
     length: 66
     placeholder_text: '# read image from path'
     dependency:
-      lesson: Comic-Con and k-means
-      task: KMeans
+      lesson: Comic-Con и k-средних
+      task: K-средних
       file: task.py
       placeholder: 1
       is_visible: false
@@ -16,8 +16,8 @@ files:
     length: 687
     placeholder_text: '# TODO'
     dependency:
-      lesson: Comic-Con and k-means
-      task: KMeans
+      lesson: Comic-Con и k-средних
+      task: K-средних
       file: task.py
       placeholder: 2
       is_visible: false
