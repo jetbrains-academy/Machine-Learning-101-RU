@@ -8,7 +8,7 @@ files:
     placeholder_text: '# read image from path'
     dependency:
       lesson: Comic-Con и k-средних
-      task: Recolor
+      task: Перерисовываем изображение
       file: task.py
       placeholder: 1
       is_visible: false
@@ -17,7 +17,7 @@ files:
     placeholder_text: '# TODO'
     dependency:
       lesson: Comic-Con и k-средних
-      task: Recolor
+      task: Перерисовываем изображение
       file: task.py
       placeholder: 2
       is_visible: false
@@ -26,7 +26,7 @@ files:
     placeholder_text: '# TODO'
     dependency:
       lesson: Comic-Con и k-средних
-      task: Recolor
+      task: Перерисовываем изображение
       file: task.py
       placeholder: 3
       is_visible: false
@@ -35,7 +35,7 @@ files:
     placeholder_text: '# TODO'
     dependency:
       lesson: Comic-Con и k-средних
-      task: Recolor
+      task: Перерисовываем изображение
       file: task.py
       placeholder: 4
       is_visible: false
@@ -45,5 +45,3 @@ files:
   visible: false
 - name: superman-batman-after.png
   visible: false
-- name: recolored-superman-batman.png
-  visible: true

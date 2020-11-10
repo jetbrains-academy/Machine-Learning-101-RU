@@ -8,7 +8,7 @@ files:
     placeholder_text: '# implement train_test_split function'
     dependency:
       lesson: Соседи и Вино
-      task: Leave One Out
+      task: Исключение по одному
       file: task.py
       placeholder: 1
       is_visible: false
@@ -17,7 +17,7 @@ files:
     placeholder_text: '# implement k-nearest neighbors classifier'
     dependency:
       lesson: Соседи и Вино
-      task: Leave One Out
+      task: Исключение по одному
       file: task.py
       placeholder: 2
       is_visible: false
@@ -26,7 +26,7 @@ files:
     placeholder_text: '# implement precision/recall'
     dependency:
       lesson: Соседи и Вино
-      task: Leave One Out
+      task: Исключение по одному
       file: task.py
       placeholder: 3
       is_visible: false
@@ -35,7 +35,7 @@ files:
     placeholder_text: '# implement optimal k search using leave one out'
     dependency:
       lesson: Соседи и Вино
-      task: Leave One Out
+      task: Исключение по одному
       file: task.py
       placeholder: 4
       is_visible: false
