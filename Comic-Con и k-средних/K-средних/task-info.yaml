@@ -1,0 +1,25 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 91
+    length: 66
+    placeholder_text: '# read image from path'
+    dependency:
+      lesson: Comic-Con и k-средних
+      task: Читаем изображение
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 554
+    length: 687
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: false
+- name: superman-batman.png
+  visible: true
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

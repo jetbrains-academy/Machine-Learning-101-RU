@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 64
+    length: 189
+    placeholder_text: '# implement train_test_split function'
+    dependency:
+      lesson: Соседи и Вино
+      task: Разбиение выборки
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 304
+    length: 222
+    placeholder_text: '# implement k-nearest neighbors classifier'
+- name: wine.csv
+  visible: true
+- name: __init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false

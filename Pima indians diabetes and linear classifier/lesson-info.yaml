@@ -1,6 +1,0 @@
-type: framework
-content:
-- Read data
-- Loss function
-- Gradient Descent
-- Stochastic Gradient Descent

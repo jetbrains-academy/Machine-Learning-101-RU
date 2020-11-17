@@ -1,14 +1,12 @@
-title: Machine Learning 101
-language: English
+title: Введение в машинное обучение
+language: Russian
 summary: |-
-  Introductory Machine Learning course.
-  This course was originally developed for the Machine Learning course in Academic University, St. Petersburg, Russia.
+  Курс посвящен азам машинного обучения.
 programming_language: Python
 environment: unittest
 content:
-- Neighbors and Wine
-- Comic-Con and k-means
-- Horror Trees
-- Bayes guards SMS
-- Pima indians diabetes and linear classifier
-- Iris network
+- О курсе
+- Зачем изучать машинное обучение
+- Соседи и Вино
+- Comic-Con и k-средних
+

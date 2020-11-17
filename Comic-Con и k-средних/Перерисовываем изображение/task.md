@@ -1,0 +1,17 @@
+Осталось только реализовать функцию, которая поможет перекрасить изображение с использованием нужного количества цветов.
+
+### Задание
+
+Реализуйте функцию `recolor(image, n_colors)`, принимающую на вход изображение в виде numpy-массива и количество цветов. Функция должна возвращать массив изображения, цвета которого были изменены в результате работы метода `k_means`.
+
+Для сохранения изображения вы можете сначала создать объект ```Pillow.Image``` (с ним мы уже сталкивались в задании **Чтение изображения**), воспользовавшись методом ```fromarray```, [создающим](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.fromarray) изображение из массива. Затем сохраните изображение, используя метод ```saveimage```.  
+
+
+<div class="column" style="float: left;width: 45%;padding: 5px;">
+    <img src="superman-batman.png" alt="Исходное изображение" style="width:100%">
+    <p style="text-align:center;">Исходное изображение</p>
+</div>
+<div class="column" style="float: left;width: 45%;padding: 5px;">
+    <img src="superman-batman-after.png" alt="16-цветное изображение" style="width:100%">
+    <p style="text-align:center;">8-цветное изображение</p>
+</div>
