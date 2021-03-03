@@ -1,4 +1,5 @@
 import numpy as np
+from distances import euclidean_dist
 
 
 def train_test_split(X, y, ratio=0.8):
@@ -16,17 +17,9 @@ def knn(X_train, y_train, X_test, k, dist):
     return [classify_single(x) for x in X_test]
 
 
-def euclidean_dist(x, y):
-    return np.linalg.norm(x - y)
-
-
-def taxicab_dist(x, y):
-    return np.abs(x - y).sum()
-
 
 if __name__ == '__main__':
     wines = np.genfromtxt('wine.csv', delimiter=',')
-
     X, y = wines[:, 1:], np.array(wines[:, 0], dtype=np.int32)
     X_train, y_train, X_test, y_test = train_test_split(X, y, 0.6)
     y_predicted = knn(X_train, y_train, X_test, 5, euclidean_dist)

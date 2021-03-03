@@ -3,7 +3,8 @@ import unittest
 
 from numpy.ma.testutils import assert_array_equal
 
-from task import knn, euclidean_dist
+from task import knn
+from distances import euclidean_dist
 
 
 class TestCase(unittest.TestCase):
