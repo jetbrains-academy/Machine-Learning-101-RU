@@ -40,4 +40,29 @@ $w(i,u) = [i\leq k]$
           # ...
           return opt_k
 
+Заготовка для функции находится в файле `crossvalidation.py`. 
+
 Оцените точность и полноту предсказаний классификатора с оптимальным `k`и любыми двумя функциями расстояния.
+
+Для этого импортируйте `loocv` в `task.py` и скомбинируйте все созданные нами функции в `main`:
+```python
+if __name__ == '__main__':
+    wines = np.genfromtxt('wine.csv', delimiter=',')
+
+    X, y = wines[:, 1:], np.array(wines[:, 0], dtype=np.int32)
+    X_train, y_train, X_test, y_test = train_test_split(X, y, 0.6)
+    y_euclidean_predicted = knn(X_train, y_train, X_test, 5, euclidean_dist)
+    print_precision_recall(precision_recall(y_euclidean_predicted, y_test))
+
+    euclidean_opt = loocv(X_train, y_train, euclidean_dist)
+    taxicab_opt = loocv(X_train, y_train, taxicab_dist)
+
+    print("optimal euclidian k = " + str(euclidean_opt))
+    print("optimal taxicab k = " + str(taxicab_opt))
+
+    y_euclidean_predicted = knn(X_train, y_train, X_test, euclidean_opt, euclidean_dist)
+    print_precision_recall(precision_recall(y_euclidean_predicted, y_test))
+
+    y_taxicab_predicted = knn(X_train, y_train, X_test, taxicab_opt, euclidean_dist)
+    print_precision_recall(precision_recall(y_taxicab_predicted, y_test))
+```
