@@ -2,46 +2,17 @@ type: theory
 files:
 - name: task.py
   visible: true
-  placeholders:
-  - offset: 155
-    length: 66
-    placeholder_text: '# read image from path'
-    dependency:
-      lesson: Comic-Con и k-средних
-      task: Перерисовываем изображение
-      file: task.py
-      placeholder: 1
-      is_visible: false
-  - offset: 524
-    length: 687
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Comic-Con и k-средних
-      task: Перерисовываем изображение
-      file: task.py
-      placeholder: 2
-      is_visible: false
-  - offset: 1286
-    length: 72
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Comic-Con и k-средних
-      task: Перерисовываем изображение
-      file: task.py
-      placeholder: 3
-      is_visible: false
-  - offset: 1841
-    length: 112
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Comic-Con и k-средних
-      task: Перерисовываем изображение
-      file: task.py
-      placeholder: 4
-      is_visible: false
 - name: __init__.py
   visible: false
 - name: superman-batman.png
   visible: false
 - name: superman-batman-after.png
   visible: false
+- name: clustering.py
+  visible: true
+- name: distances.py
+  visible: true
+- name: plotting.py
+  visible: true
+- name: processing.py
+  visible: true
