@@ -3,7 +3,7 @@ import unittest
 
 from numpy.ma.testutils import assert_array_equal
 
-from task import knn
+from metric_classification import knn
 from distances import euclidean_dist
 
 

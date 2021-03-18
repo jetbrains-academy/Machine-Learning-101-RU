@@ -18,3 +18,5 @@ files:
   visible: false
 - name: crossvalidation.py
   visible: false
+- name: metric_classification.py
+  visible: false

@@ -3,18 +3,18 @@ import numpy as np
 
 def precision_recall(y_pred, y_test):
     class_precision_recall = []
-    # Here we calculate a precision and recall for each of the unique classes of the
+    # Here we calculate precision and recall for each of the unique classes of the
     # testing sample
     for c in np.unique(y_test):
-        # Here we evaluate the tp for the class
+        # Here we evaluate tp for the class
         tp = #TODO
-        # Here we evaluate an fp for the class
+        # Here we evaluate fp for the class
         fp = #TODO
-        # Here we evaluate an fn for the class
+        # Here we evaluate fn for the class
         fn = #TODO
-        # Here we calculate the precision for the class
+        # Here we calculate precision for the class
         precision = #TODO
-        # Here we calculate the recall for the class
+        # Here we calculate recall for the class
         recall =#TODO
         # Here we add a tuple containing a class, its precision and recall to the resulting array
         class_precision_recall.append((c, precision, recall))

@@ -1,5 +1,5 @@
 import numpy as np
-from task import knn
+from metric_classification import knn
 
 
 def loocv(X_train, y_train, dist):

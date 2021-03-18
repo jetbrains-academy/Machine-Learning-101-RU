@@ -22,13 +22,13 @@ def train_test_split(X, y, ratio=0.8):
 if __name__ == '__main__':
     # Here we load data from the csv file
     wines = np.genfromtxt('wine.csv', delimiter=',')
-    # Here the data is split into object and classes
+    # Here the data is split into objects and classes
     # to process them separately. Note that an object and
     # a corresponding class will have the same index
     X, y = wines[:, 1:], np.array(wines[:, 0], dtype=np.int32)
     # Here we call our function to look at the result
     X_train, y_train, X_test, y_test = train_test_split(X, y, 0.6)
-    # It is convenient to add a visualization (a console output at least)
+    # It is convenient to add a visualization (console output at least)
     # for each of the functions you add in a new step. Like this!
     print("X_train: ", "\n")
     print(X_train)
