@@ -1,6 +1,7 @@
 import unittest
 
-from task import euclidean_dist, loocv
+from distances import euclidean_dist
+from crossvalidation import loocv
 
 import numpy as np
 

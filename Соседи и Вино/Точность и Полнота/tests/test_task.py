@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from task import precision_recall
+from metrics import precision_recall
 
 
 class TestCase(unittest.TestCase):
