@@ -2,7 +2,6 @@ import numpy as np
 from PIL import Image
 from clustering import k_means
 from distances import euclidean_distance
-from task import read_image
 
 
 IMAGE_WIDTH = 768
@@ -14,8 +13,7 @@ def recolor(image, n_colors):
     return centroids[labels]
 
 
-def process_image():
-    image = read_image("superman-batman.png")
+def process_image(image):
     recolored_image = recolor(image, 8).reshape(IMAGE_HEIGHT, IMAGE_WIDTH, 3).astype('uint8')
     image = Image.fromarray(recolored_image)
     image.save("recolored-superman-batman.png")
