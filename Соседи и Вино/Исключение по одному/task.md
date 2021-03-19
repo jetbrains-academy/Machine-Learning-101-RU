@@ -44,7 +44,7 @@ $w(i,u) = [i\leq k]$
 
 Оцените точность и полноту предсказаний классификатора с оптимальным `k`и любыми двумя функциями расстояния.
 
-Для этого импортируйте `loocv` в `task.py` и скомбинируйте все созданные нами функции в `main`:
+Для этого импортируйте `loocv`, `precision_recall`, `euclidian_dist` и `taxicab_dist` в `task.py` и скомбинируйте все созданные нами функции в `main`:
 ```python
 if __name__ == '__main__':
     wines = np.genfromtxt('wine.csv', delimiter=',')
