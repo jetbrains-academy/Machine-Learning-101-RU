@@ -2,7 +2,7 @@ import numpy as np
 
 
 def init_clusters(n_clusters, n_features):
-    return np.random.random_integers(low=0, high=255, size=(n_clusters, n_features))
+    return np.random.randint(low=0, high=255, size=(n_clusters, n_features))
 
 
 def k_means(X, n_clusters, distance_metric):
