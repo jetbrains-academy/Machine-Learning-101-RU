@@ -2,10 +2,6 @@ type: edu
 files:
 - name: task.py
   visible: true
-  placeholders:
-  - offset: 64
-    length: 189
-    placeholder_text: '# implement train_test_split function'
 - name: wine.csv
   visible: true
 - name: __init__.py
@@ -15,4 +11,12 @@ files:
 - name: tests/test_task.py
   visible: false
 - name: wine.jpg
+  visible: false
+- name: distances.py
+  visible: false
+- name: metrics.py
+  visible: false
+- name: crossvalidation.py
+  visible: false
+- name: metric_classification.py
   visible: false
