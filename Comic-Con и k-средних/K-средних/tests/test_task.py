@@ -2,9 +2,8 @@ import unittest
 import numpy as np
 from numpy.testing import assert_array_equal
 
-from clustering import k_means
+from clustering import k_means, init_clusters
 from distances import euclidean_distance
-import clustering
 
 
 class TestCase(unittest.TestCase):
@@ -19,7 +18,7 @@ class TestCase(unittest.TestCase):
         expected_labels = [0, 0, 1, 1]
         expected_centers = np.array([[0, 0], [0, 1]])
 
-        clustering.init_clusters = lambda x, y: np.array([[0, 0], [1, 1]])
+        init_clusters = lambda x, y: np.array([[0, 0], [1, 1]])
 
         classification, clusters = k_means(X, 2, euclidean_distance)
         assert_array_equal(classification, expected_labels)
