@@ -7,7 +7,7 @@ def read_data(path):
     data = pd.read_csv(path)
     y = data[['type']]
     X = data.drop('type', 1)
-    return X.as_matrix(), y, X.columns.values
+    return X.to_numpy(), y, X.columns.values
 
 
 class LabelEncoder:
