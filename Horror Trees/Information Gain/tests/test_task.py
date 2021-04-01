@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from ..task import Predicate
+from divide import Predicate
 
 
 class TestCase(unittest.TestCase):

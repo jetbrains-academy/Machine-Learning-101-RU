@@ -6,3 +6,7 @@ class Predicate:
     def divide(self, X, y):
         # TODO
         pass
+
+    def information_gain(self, X, y):
+        # TODO
+        pass
