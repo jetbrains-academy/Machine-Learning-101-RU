@@ -1,3 +1,5 @@
+from calculate_entropy import entropy
+
 class Predicate:
     def __init__(self, column, value):
         self.column = column
