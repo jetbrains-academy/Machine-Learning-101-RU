@@ -1,8 +1,7 @@
 import unittest
-
 import numpy as np
-
-from ..task import DecisionTree, Node
+from tree import DecisionTree
+from task import Node
 
 
 class TestCase(unittest.TestCase):

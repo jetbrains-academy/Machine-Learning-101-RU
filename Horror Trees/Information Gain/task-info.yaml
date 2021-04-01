@@ -43,3 +43,5 @@ files:
   visible: true
 - name: calculate_entropy.py
   visible: true
+- name: tree.py
+  visible: false
