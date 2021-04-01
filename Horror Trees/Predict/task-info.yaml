@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 1886
+  - offset: 1885
     length: 103
     placeholder_text: '# TODO'
     dependency:
@@ -12,7 +12,7 @@ files:
       file: task.py
       placeholder: 1
       is_visible: false
-  - offset: 2096
+  - offset: 2095
     length: 127
     placeholder_text: '#TODO'
     dependency:
@@ -21,7 +21,7 @@ files:
       file: task.py
       placeholder: 2
       is_visible: false
-  - offset: 2375
+  - offset: 2374
     length: 233
     placeholder_text: '# TODO'
     dependency:
@@ -30,7 +30,7 @@ files:
       file: task.py
       placeholder: 3
       is_visible: false
-  - offset: 2656
+  - offset: 2655
     length: 158
     placeholder_text: '# TODO'
     dependency:
@@ -39,7 +39,7 @@ files:
       file: task.py
       placeholder: 4
       is_visible: false
-  - offset: 2872
+  - offset: 2871
     length: 1126
     placeholder_text: '# TODO'
     dependency:
@@ -48,8 +48,8 @@ files:
       file: task.py
       placeholder: 5
       is_visible: false
-  - offset: 4034
-    length: 663
+  - offset: 4003
+    length: 693
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
@@ -57,3 +57,9 @@ files:
   visible: true
 - name: tests/test_task.py
   visible: false
+- name: calculate_entropy.py
+  visible: true
+- name: divide.py
+  visible: true
+- name: tree.py
+  visible: true

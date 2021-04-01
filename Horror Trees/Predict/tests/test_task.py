@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from ..task import DecisionTree
+from tree import DecisionTree
 
 
 class TestCase(unittest.TestCase):
