@@ -24,6 +24,11 @@ class TestCase(unittest.TestCase):
         tree = DecisionTree().build(X, y)
         self.assertEqual(3, count_nodes(tree.root))
 
+    # a test to check if get_best_predicate() method returns anything, if not - print "implement get_best_predicate() method"
+    # a test to check if get_best_predicate() returns an instance of Predicate, if not - print "implement the method ... which returns an instance of Predicate"
+
+    # a test to check if build_subtree() returns something, if not - print "implement the method get_best_predicate()"
+
 
 def count_nodes(node):
     counter = 0
