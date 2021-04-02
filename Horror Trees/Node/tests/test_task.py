@@ -18,6 +18,8 @@ class TestCase(unittest.TestCase):
         node = Node(1, 2, [1,2], [3,4])
         self.assertTrue(hasattr(node, "false_branch"), "Store false_branch in the true_branch field")
 
+    # maybe a test that checks that new column / value value is assigned
+
     def test_fields(self):
         node = Node(1, 2, [1,2], [3,4])
         self.assertEqual(4, len(node.__dict__), "You should store all values passed to the Node object as field")
