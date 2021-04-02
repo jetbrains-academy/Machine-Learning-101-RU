@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
 - name: __init__.py
-  visible: true
+  visible: false
 - name: halloween.csv
   visible: true
 - name: tests/test_task.py
@@ -14,3 +14,5 @@ files:
   visible: true
 - name: tree.py
   visible: true
+- name: run_all.py
+  visible: false
