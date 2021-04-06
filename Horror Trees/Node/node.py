@@ -7,4 +7,4 @@ class Node:
         return f'column: {self.column};\n' \
                f'value: {self.value};\n' \
                f'true branch: {self.true_branch};\n' \
-               f'false branch: {self.false_branch} '
+               f'false branch: {self.false_branch}'
