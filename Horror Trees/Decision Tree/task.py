@@ -39,5 +39,5 @@ if __name__ == '__main__':
 
     print(f'Information Gain: {predicate.information_gain(X, y)}')      # 4
 
-    print(DecisionTree().build(X, y))
+    print(DecisionTree().build(X, y))                                   # 5
 
