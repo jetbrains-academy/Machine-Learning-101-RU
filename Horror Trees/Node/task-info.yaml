@@ -20,3 +20,7 @@ files:
   visible: false
 - name: run_all.py
   visible: false
+- name: try.py
+  visible: true
+- name: node.py
+  visible: true
