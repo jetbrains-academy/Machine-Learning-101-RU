@@ -1,29 +1,37 @@
-import numpy as np
+from node import Node       # 1
+
+import pandas as pd       # 2
+from calculate_entropy import entropy
+
+import numpy as np      # 3
+from divide import Predicate
 
 
-def entropy(y):
-    _, counts = np.unique(y, return_counts=True)
-    p = counts / len(y)
-    return -(p * np.log2(p)).sum()
+def read_data(path):
+    data = pd.read_csv(path)
+    y = data[['type']]
+    X = data.drop('type', 1)
+    return X.to_numpy(), y, X.columns.values
 
 
-class Node:
-    def __init__(self, column=-1, value=None, true_branch=None, false_branch=None):
-        self.column = column
-        self.value = value
-        self.true_branch = true_branch
-        self.false_branch = false_branch
+if __name__ == '__main__':
+    node = Node(1, 2, [1, 2], [3, 4])
+    print(node)
 
+    X, y, columns = read_data("halloween.csv")
+    print('dataset entropy:', entropy(y))
 
-class Predicate:
-    def __init__(self, column, value):
-        self.column = column
-        self.value = value
+    predicate = Predicate(3, 'clear')
+    X = np.array([[1, 1, 1, 'clear'],
+                  [2, 2, 2, 'clear'],
+                  [3, 3, 3, 'green'],
+                  [1, 2, 3, 'black']])
+    y = np.array([1, 2, 3, 4])
 
-    def divide(self, X, y):
-        if isinstance(self.value, int) or isinstance(self.value, float):
-            mask = X[:, self.column] >= self.value
-        else:
-            mask = X[:, self.column] == self.value
+    X1, y1, X2, y2 = predicate.divide(X, y)
+    print(f'Division result: '
+          f'\nFirst group labels: {y1} '
+          f'\nFirst group objects: {X1} '
+          f'\nSecond group labels: {y2} '
+          f'\nSecond group objects: {X2}')
 
-        return X[mask], y[mask], X[~mask], y[~mask]
