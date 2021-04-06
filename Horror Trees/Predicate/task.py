@@ -1,13 +1,13 @@
-from node import Node       # 1
+from node import Node                           # 1
 
-import pandas as pd       # 2
+import pandas as pd                             # 2
 from calculate_entropy import entropy
 
-import numpy as np      # 3
+import numpy as np                              # 3
 from divide import Predicate
 
 
-def read_data(path):
+def read_data(path):                            # 2
     data = pd.read_csv(path)
     y = data[['type']]
     X = data.drop('type', 1)
@@ -15,13 +15,13 @@ def read_data(path):
 
 
 if __name__ == '__main__':
-    node = Node(1, 2, [1, 2], [3, 4])
+    node = Node(1, 2, [1, 2], [3, 4])           # 1
     print(node)
 
-    X, y, columns = read_data("halloween.csv")
+    X, y, columns = read_data("halloween.csv")  # 2
     print('dataset entropy:', entropy(y))
 
-    predicate = Predicate(3, 'clear')
+    predicate = Predicate(3, 'clear')           # 3
     X = np.array([[1, 1, 1, 'clear'],
                   [2, 2, 2, 'clear'],
                   [3, 3, 3, 'green'],
