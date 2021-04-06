@@ -15,13 +15,13 @@ def read_data(path):                                                    # 2
 
 
 if __name__ == '__main__':
-    node = Node(1, 2, [1, 2], [3, 4])                                   # 1
-    print(node)
+    node = Node(1, 2, [1, 2], [3, 4])           # 1
+    print(f'{node}\n')
 
-    X, y, columns = read_data("halloween.csv")                          # 2
-    print('dataset entropy:', entropy(y))
+    X, y, columns = read_data("halloween.csv")  # 2
+    print(f'dataset entropy: {entropy(y)}\n')
 
-    predicate = Predicate(3, 'clear')                                   # 3
+    predicate = Predicate(3, 'clear')           # 3
     X = np.array([[1, 1, 1, 'clear'],
                   [2, 2, 2, 'clear'],
                   [3, 3, 3, 'green'],
@@ -33,7 +33,7 @@ if __name__ == '__main__':
           f'\nFirst group labels: {y1} '
           f'\nFirst group objects: {X1} '
           f'\nSecond group labels: {y2} '
-          f'\nSecond group objects: {X2}')
+          f'\nSecond group objects: {X2}\n')
 
-    print(f'Information Gain: {predicate.information_gain(X, y)}')      # 4
+    print(f'Information Gain: {predicate.information_gain(X, y)}\n')      # 4
 

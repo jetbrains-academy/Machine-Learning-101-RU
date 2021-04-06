@@ -11,7 +11,7 @@ def read_data(path):
 
 if __name__ == '__main__':
     node = Node(1, 2, [1, 2], [3, 4])
-    print(node)
+    print(f'{node}\n')
 
     X, y, columns = read_data("halloween.csv")
-    print('dataset entropy:', entropy(y))
+    print(f'dataset entropy: {entropy(y)}\n')

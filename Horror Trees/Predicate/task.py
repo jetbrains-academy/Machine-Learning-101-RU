@@ -16,10 +16,10 @@ def read_data(path):                            # 2
 
 if __name__ == '__main__':
     node = Node(1, 2, [1, 2], [3, 4])           # 1
-    print(node)
+    print(f'{node}\n')
 
     X, y, columns = read_data("halloween.csv")  # 2
-    print('dataset entropy:', entropy(y))
+    print(f'dataset entropy: {entropy(y)}\n')
 
     predicate = Predicate(3, 'clear')           # 3
     X = np.array([[1, 1, 1, 'clear'],
@@ -33,5 +33,5 @@ if __name__ == '__main__':
           f'\nFirst group labels: {y1} '
           f'\nFirst group objects: {X1} '
           f'\nSecond group labels: {y2} '
-          f'\nSecond group objects: {X2}')
+          f'\nSecond group objects: {X2}\n')
 
