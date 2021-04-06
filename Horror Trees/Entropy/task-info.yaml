@@ -14,7 +14,7 @@ files:
   visible: false
 - name: tree.py
   visible: false
-- name: run_all.py
+- name: halloween.py
   visible: false
 - name: node.py
   visible: true

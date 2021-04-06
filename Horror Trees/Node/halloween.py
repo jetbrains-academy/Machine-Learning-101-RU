@@ -2,9 +2,8 @@ import numpy as np
 import pandas as pd
 from PIL import Image, ImageDraw
 from task import Node
-from calculate_entropy import entropy
-from divide import Predicate
 from tree import DecisionTree
+
 
 def read_data(path):
     data = pd.read_csv(path)
@@ -20,6 +19,7 @@ class LabelEncoder:
 
     def decode(self, y):
         return self.classes_[y]
+
 
 def getwidth(tree):
     if not isinstance(tree, Node):
