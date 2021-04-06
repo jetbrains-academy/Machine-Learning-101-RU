@@ -1,6 +1,6 @@
 import numpy as np
 from divide import Predicate
-from task import Node
+from node import Node
 
 class DecisionTree:
     def build(self, X, y):
