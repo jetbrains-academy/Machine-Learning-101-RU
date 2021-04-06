@@ -56,3 +56,6 @@ class DecisionTree:
                 else:
                     branch = sub_tree.false_branch
             return self.classify_subtree(x, branch)
+
+    def __repr__(self):
+        return f'Decision Tree: \n{self.root};\n'

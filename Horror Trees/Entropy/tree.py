@@ -36,3 +36,6 @@ class DecisionTree:
                     best_gain = gain
 
         return best_predicate
+
+    def __repr__(self):
+        return f'Decision Tree: \n{self.root};\n'
