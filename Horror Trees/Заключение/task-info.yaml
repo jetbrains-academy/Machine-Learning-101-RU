@@ -16,3 +16,5 @@ files:
   visible: true
 - name: node.py
   visible: true
+- name: RNA_tree.png
+  visible: false
