@@ -54,3 +54,4 @@ def read_data(path):
 X, y, columns = read_data("halloween.csv")
 print(f'dataset entropy: {entropy(y)}\n')
 ```
+Блок `if __name__ == '__main__':` должен быть в самом конце файла!
