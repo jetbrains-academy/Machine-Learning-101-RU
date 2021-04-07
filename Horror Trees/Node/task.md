@@ -14,6 +14,14 @@
 предыдущем уровне. Подобные логические модели издавна используются в ботанике, зоологии, минералогии, 
 медицине и зачастую реализованы в виде [ключей-определителей](https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D1%8E%D1%87_%D0%B4%D0%BB%D1%8F_%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F) с тезами и антитезами ([пример](http://antonlyakh.ru/blog/pictures/pr-lavrenko-1955-blacksea-diatoms.png)).
 
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 ![tree](example_tree.png)
 
 Пример решающего дерева показан на рисунке. Изображенной схеме принятия решений 
