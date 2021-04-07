@@ -18,3 +18,7 @@ files:
   visible: true
 - name: RNA_tree.png
   visible: false
+- name: boo.jpg
+  visible: false
+- name: example_tree.png
+  visible: false
