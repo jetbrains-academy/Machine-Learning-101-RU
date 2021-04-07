@@ -47,13 +47,35 @@ class DecisionTree:
 
         return best_predicate
 
-
     def predict(self, x):
         return self.classify_subtree(x, self.root)
 
     def classify_subtree(self, x, sub_tree):
-        # TODO
         pass
+        # return sub_tree if it is a class label (not a Node instance)
+        # if # TODO
+            # return sub_tree
+        # else:
+            # take a value of the object x that is in the sub_tree column
+            # v = # TODO
+            # check if it is a numeric value
+            # if isinstance(v, int) or isinstance(v, float):
+                # the value v fits the numeric condition at the given node, proceed
+                # to the true_branch, if not - to the false_branch
+                # if v >= # TODO
+                    # branch = # TODO
+                # else:
+                    # branch = # TODO
+            # if v is not a numeric value - compare it with the nominal condition
+            # at the node ad then do the same as in the if clause above
+            # else:
+                # if v == # TODO
+                    # branch = # TODO
+                # else:
+                    # branch = # TODO
+            # do the same recursively for the new branch
+            # return # TODO
 
+    # Below we defined a __repr__ method to ensure readable printing of Decision Tree instances
     def __repr__(self):
         return f'Decision Tree: \n{self.root};\n'
