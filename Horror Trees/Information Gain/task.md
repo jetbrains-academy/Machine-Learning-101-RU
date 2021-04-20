@@ -47,3 +47,5 @@ $$IGain = H(parent_y) - H(children_{y|x}) $$
 ```python
     print(f'Information Gain: {predicate.information_gain(X, y)}\n')     
 ```
+Переменные, необходимые для корректной работы этого кода вводились на предыдущих шагах, 
+если вы до сих пор не работали с `task.py`, то обратите на них внимание.
