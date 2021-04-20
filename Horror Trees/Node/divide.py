@@ -10,13 +10,14 @@ class Predicate:
         # based on the "greater or equal to" condition
         if # TODO :
             mask = # TODO
-        # if the value is not numeric, create the array based on the
+        # if the value is not numeric (int or float), create the array based on the
         # "equal to" condition
         else:
             mask = # TODO
         # return the results in the following order: X1, y1, X2, y2
         return # TODO
 
+    # this method is to be implemented in the task "Information Gain"
     def information_gain(self, X, y):
         pass
         # use the divide method to split the sample
