@@ -36,22 +36,22 @@ $i$-го вида в сообществе из $С$ различных видо�
 
 1. Необходимые импорты:
 ```python
-from calculate_entropy import entropy
-import pandas as pd
+        from calculate_entropy import entropy
+        import pandas as pd
 ```
 
 2. Функция `read_data()` для чтения данных из файла:
 ```python
-def read_data(path):
-    data = pd.read_csv(path)
-    y = data[['type']]
-    X = data.drop('type', 1)
-    return X.to_numpy(), y, X.columns.values
+        def read_data(path):
+            data = pd.read_csv(path)
+            y = data[['type']]
+            X = data.drop('type', 1)
+            return X.to_numpy(), y, X.columns.values
 ```
 
 3. Строчки для печати результатов вычисления энтропии датасета в блок `if __name__ == '__main__':`:
 ```python
-X, y, columns = read_data("halloween.csv")
-print(f'dataset entropy: {entropy(y)}\n')
+        X, y, columns = read_data("halloween.csv")
+        print(f'dataset entropy: {entropy(y)}\n')
 ```
-Блок `if __name__ == '__main__':` должен быть в самом конце файла!
+Блок `if __name__ == '__main__':` в файле должен идти **после** всех функций/переменных, которые он использует!
