@@ -1,3 +1,7 @@
+# Here we defined the Node class to store tree nodes with the following attributes:
+# - the predicate, by which the dataset is split in this node, stored as a number of
+# a column (trait) and a value with which to compare;
+# - the true and false branches.
 class Node:
     def __init__(self, column=-1, value=None, true_branch=None, false_branch=None):
         #TODO: implement four attributes of the class Node

@@ -1,5 +1,9 @@
 from calculate_entropy import entropy
 
+# Here we defined the Predicate class to store predicates - values in
+# particular columns that are used to split our dataset. The class
+# includes the divide method which splits the dataset by the given predicate,
+# and the information_gain method which calculated information gain for a given split.
 class Predicate:
     def __init__(self, column, value):
         self.column = column

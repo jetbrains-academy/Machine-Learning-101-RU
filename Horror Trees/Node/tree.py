@@ -2,10 +2,18 @@ import numpy as np
 from divide import Predicate
 from node import Node
 
+# Here we defined the DecisionTree class to store decision trees. It includes
+# the build method which assigns the result of building a subtree to the root attribute.
+# The get_best_predicate static method builds all possible predicates for a given trait, finds
+# the one with the best information gain and returns it. The result is used in the
+# build_subtree method to split the dataset by the best predicate and recursively
+# build the left and right subtrees. The predict method accepts an object and returns its class label.
+# The recursive method classify_subtree is called from predict, it accepts an object and a subtree,
+# performs the classification and returns the result.
 class DecisionTree:
     def build(self, X, y):
         self.root = self.build_subtree(X, y)
-        pass
+        return self
 
     def build_subtree(self, X, y):
         # get the most informative predicate using the get_best_predicate method
