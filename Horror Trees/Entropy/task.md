@@ -39,17 +39,7 @@ $i$-го вида в сообществе из $С$ различных видо�
         from calculate_entropy import entropy
         import pandas as pd
 ```
-
-2. Функция `read_data()` для чтения данных из файла:
-```python
-        def read_data(path):
-            data = pd.read_csv(path)
-            y = data[['type']]
-            X = data.drop('type', 1)
-            return X.to_numpy(), y, X.columns.values
-```
-
-3. Строчки для печати результатов вычисления энтропии датасета в блок `if __name__ == '__main__':`:
+2. Строчки для печати результатов вычисления энтропии датасета в блок `if __name__ == '__main__':`:
 ```python
         X, y, columns = read_data("halloween.csv")
         print(f'dataset entropy: {entropy(y)}\n')
