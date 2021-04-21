@@ -8,7 +8,7 @@ class DecisionTree:
         return self
 
     def build_subtree(self, X, y):
-        predicate = self.get_best_predicate(X, y)
+        predicate = DecisionTree.get_best_predicate(X, y)
 
         if predicate:
             X1, y1, X2, y2 = predicate.divide(X, y)
@@ -20,7 +20,7 @@ class DecisionTree:
             unique_y = np.unique(y, return_counts=True)
             return unique_y[np.argmax(unique_y[1])][0]
 
-    def get_best_predicate(self, X, y):
+    def get_best_predicate(X, y):
         best_predicate = None
         best_gain = 0.0
         column_count = len(X[0])
@@ -59,4 +59,3 @@ class DecisionTree:
 
     def __repr__(self):
         return f'Decision Tree: \n{self.root};\n'
-

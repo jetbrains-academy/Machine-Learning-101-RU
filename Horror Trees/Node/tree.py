@@ -27,7 +27,7 @@ class DecisionTree:
             return # TODO
         pass
 
-    def get_best_predicate(self, X, y):
+    def get_best_predicate(X, y):
         best_predicate = None
         best_gain = 0.0
         column_count = len(X[0])
@@ -36,7 +36,8 @@ class DecisionTree:
         for column in range(0, column_count):
             # get unique values in the current column
             column_values = np.unique(X[:, column])
-            #iterate over unique values in the column to calculate information gain for each using class Predicate
+            #iterate over unique values in the column to calculate
+            # information gain for each using class Predicate
             for value in column_values:
                 predicate = # TODO
                 gain = # TODO
@@ -47,6 +48,7 @@ class DecisionTree:
 
         return best_predicate
 
+    # the following methods are to be implemented in the task "Predict"
     def predict(self, x):
         return self.classify_subtree(x, self.root)
 
