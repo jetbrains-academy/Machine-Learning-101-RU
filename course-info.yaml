@@ -1,7 +1,6 @@
 title: Введение в машинное обучение
 language: Russian
-summary: |-
-  Курс посвящен азам машинного обучения.
+summary: Курс посвящен азам машинного обучения.
 programming_language: Python
 environment: unittest
 content:
@@ -9,4 +8,4 @@ content:
 - Зачем изучать машинное обучение
 - Соседи и Вино
 - Comic-Con и k-средних
-
+- Horror Trees
