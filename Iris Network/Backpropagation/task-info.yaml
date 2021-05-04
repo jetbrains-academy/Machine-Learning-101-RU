@@ -1,0 +1,23 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 1292
+    length: 94
+    placeholder_text: '# TODO'
+    dependency:
+      lesson: Iris network
+      task: Forward Step
+      file: task.py
+      placeholder: 1
+      is_visible: false
+  - offset: 1454
+    length: 261
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: false
+- name: iris.csv
+  visible: true
+- name: tests/test_task.py
+  visible: false
