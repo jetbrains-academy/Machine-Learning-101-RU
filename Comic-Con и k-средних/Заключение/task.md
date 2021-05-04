@@ -9,4 +9,4 @@
 
 Еще одной модификацией является алгоритм [X-means, англ.](https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#:~:text=In%20statistics%20and%20data%20mining,criterion%20(BIC)%20is%20reached). Метод принимает на вход диапазон возможного количества кластеров и, запустив алгоритм для каждого из этих значений, определяет наилучший результат согласно выбранной метрике качества.
 
-Алгоритм **k-средних** также используется в более сложных задачах машинного обучения, к примеру, в [нейронной сети Кохонена](http://www.machinelearning.ru/wiki/index.php?title=%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C_%D0%9A%D0%BE%D1%85%D0%BE%D0%BD%D0%B5%D0%BD%D0%B0).
+Алгоритм **k-средних** также используется в более сложных задачах машинного обучения: к примеру, в [нейронной сети Кохонена](http://www.machinelearning.ru/wiki/index.php?title=%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C_%D0%9A%D0%BE%D1%85%D0%BE%D0%BD%D0%B5%D0%BD%D0%B0).
