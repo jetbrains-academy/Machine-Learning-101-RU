@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from ..task import NN
+from task import NN
 
 
 class TestCase(unittest.TestCase):

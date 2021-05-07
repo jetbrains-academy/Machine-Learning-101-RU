@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 from numpy.ma.testutils import assert_array_equal
 
-from ..task import NN
+from task import NN
 
 
 class TestCase(unittest.TestCase):
