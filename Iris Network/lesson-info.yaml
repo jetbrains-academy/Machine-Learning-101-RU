@@ -1,7 +1,9 @@
 type: framework
 content:
-- Neurons and Neural Networks
+- Neurons
+- Neural Network
 - Forward Step
 - Backpropagation
 - Train and Predict
-
+- Accuracy
+- Заключение
