@@ -1,7 +1,7 @@
 type: edu
 files:
 - name: task.py
-  visible: true
+  visible: false
 - name: __init__.py
   visible: false
 - name: iris.csv
@@ -9,11 +9,11 @@ files:
 - name: activation.py
   visible: true
 - name: network.py
-  visible: true
+  visible: false
 - name: derivative.py
-  visible: true
+  visible: false
 - name: evaluate.py
-  visible: true
+  visible: false
 - name: tests/__init__.py
   visible: true
 - name: tests/test_task.py

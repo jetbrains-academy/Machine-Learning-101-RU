@@ -32,8 +32,7 @@ def train_test_split(X, y, ratio=0.8):
 
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
-    X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
+    plot_data(X, y)
     nn = NN(len(X[0]), 5, 1)
-    nn.train(X_train, y_train)
-    print("Accuracy:")
-    print(accuracy(nn, X_test, y_test))
+    output = nn.feedforward(X)
+    print(output)

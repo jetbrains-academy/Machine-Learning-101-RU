@@ -7,10 +7,10 @@ files:
 - name: activation.py
   visible: true
 - name: derivative.py
-  visible: true
+  visible: false
 - name: evaluate.py
-  visible: true
+  visible: false
 - name: network.py
-  visible: true
+  visible: false
 - name: task.py
-  visible: true
+  visible: false
