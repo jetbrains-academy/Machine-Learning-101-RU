@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from network import NN
+
 
 
 def read_data(fpath):
@@ -26,29 +28,6 @@ def train_test_split(X, y, ratio=0.8):
     train_len = int(X.shape[0] * ratio)
     return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
 
-
-def sigmoid(x):
-    return 1.0 / (1.0 + np.exp(-x))
-
-
-def sigmoid_derivative(x):
-    return x * (1.0 - x)
-
-
-class NN:
-    def __init__(self, input_size, hidden_size, output_size):
-        self.w1 = 2 * np.random.random((input_size, hidden_size)) - 1
-        self.w2 = 2 * np.random.random((hidden_size, output_size)) - 1
-
-    def feedforward(self, X):
-        self.layer1 = sigmoid(np.dot(X, self.w1))
-        return sigmoid(np.dot(self.layer1, self.w2))
-
-    def backward(self, X, y, output, learning_rate=0.01):
-        l2_delta = (y - output) * sigmoid_derivative(output)
-        l1_delta = np.dot(l2_delta, self.w2.T) * sigmoid_derivative(self.layer1)
-        self.w2 += (np.dot(self.layer1.T, l2_delta) * learning_rate)
-        self.w1 += (np.dot(X.T, l1_delta) * learning_rate)
 
 
 if __name__ == '__main__':
