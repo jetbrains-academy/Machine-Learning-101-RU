@@ -14,3 +14,5 @@ files:
   visible: true
 - name: network.py
   visible: true
+- name: neuron-scheme.png
+  visible: false

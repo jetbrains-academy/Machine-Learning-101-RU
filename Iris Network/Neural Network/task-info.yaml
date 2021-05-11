@@ -16,3 +16,5 @@ files:
   visible: false
 - name: final.py
   visible: false
+- name: neuron-scheme.png
+  visible: false
