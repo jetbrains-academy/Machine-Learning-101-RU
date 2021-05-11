@@ -1,52 +1,59 @@
-<html>
+<h2>Численная оценка качества алгоритма</h2>
+- **Accuracy**
 
-<h2>Task Description: Tips & Tricks</h2>
+В простейшем случае метрикой качества может быть доля объектов, по которым классификатор принял правильное решение.
+$$Accuracy=\frac{P}{N}$$
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>Task Description</strong> window.</p>
+где $P$ – количество объектов, по которым было принято правильное решение, а
+$N$ – размер тестовой выборки. 
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+Эта метрика проста и хороша, но у нее есть одна особенность: всем объектам присваивается одинаковый вес, что может 
+быть некорректно в случае распределения, смещенного в сторону одного или нескольких классов в обучающей выборке. 
+В таком случае у классификатора больше информации про эти классы и в рамках них он будет принимать более правильные 
+решения. Это может привести к тому, что при общей accuracy в 90% в рамках каких-то из представленных классов алгоритм 
+будет работать очень плохо, с точностью ниже 50%. Возможный вариант решения этой проблемы - другой подход к оценке качества.
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
+<div class="hint">
+<b>Precision and Recall</b>
+<p>Точность (precision) и полнота (recall), с которыми мы уже знакомились в предыдущих уроках, используются при оценке 
+большей части алгоритмов извлечения информации. Они могут применяться как сами по себе, так и в качестве базиса для производных 
+метрик, таких как F-мера или R-Precision. Напомним, что точность (в пределах класса) – это доля реально принадлежащих данному 
+классу объектов среди всех объектов, которые алгоритм отнес к этому классу. Полнота – это доля обнаруженных классификатором 
+объектов, принадлежащих какому-либо классу, среди всех объектов этого класса в тестовой выборке.</p>
+</div>
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use HTML only.
-<div class="hint">Text of your hint</div></li>
+<div class="hint">
+<b>Confusion Matrix</b>
+<p>На практике значения точности и полноты удобнее рассчитывать с использованием матрицы неточностей (<i>confusion matrix</i>). 
+В случаях, когда количество классов относительно невелико (не более 100-150), это  позволяет довольно наглядно представить 
+результаты работы алгоритма.</p>
+<p>Матрица неточностей – это матрица размером N х N, где N — число классов. Столбцы этой матрицы – реальность, а строки – 
+решения классификатора. Когда классифицируется объект из тестовой выборки, то увеличивается число, стоящее на пересечении 
+строки класса, который вернул алгоритм и столбца класса, к которому в действительности относится объект. Соответственно, 
+если классификатор верно определяет большинство объектов, то диагональные элементы матрицы будут явно выражены.</p>
+</div>
 
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
+<div class="hint">
+<b>F-мера</b>
+<p>Чем выше точность и полнота, тем лучше. Однако в жизни чаще всего максимальная точность и полнота не могут быть достигнуты 
+одновременно. Поэтому было бы хорошо иметь метрику, которая объединяет в себе точность и полноту алгоритма. Именно такой метрикой 
+является F-мера, представляющая собой гармоническое среднее между точностью и полнотой. Она стремится к нулю, если точность или 
+полнота стремится к нулю.</p>
+$$F = 2\frac{Precision * Recall}{Precision + Recall}$$
+</div>
 
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
+<h2>Задание</h2>
 
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
+В этом задании мы оцениваем качество классификации простым подсчетом отношения правильно классифицированных объектов 
+к общему количеству объектов в выборке.
 
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
-</html>
+В файле `evaluate.py` реализуйте функцию `accuracy`, которая прогоняет тестовую выборку через алгоритм, а затем сравнивает полученные 
+метки классов с реальными и возвращает долю верно классифицированных объектов.
+
+Для того чтобы посмотреть на результаты работы кода, вы можете добавить следующие строки в блок `if __name__ == '__main__':` в `task.py` и запустить его:
+
+```python
+print("Accuracy:")
+print(accuracy(nn, X_test, y_test))
+```
+Переменные, необходимые для корректной работы этого кода, вводились на предыдущих шагах; если вы до сих пор не работали с `task.py`, то обратите на них внимание.
