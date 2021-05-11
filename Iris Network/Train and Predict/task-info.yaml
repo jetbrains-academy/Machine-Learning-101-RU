@@ -33,3 +33,11 @@ files:
   visible: true
 - name: tests/test_task.py
   visible: false
+- name: activation.py
+  visible: true
+- name: derivative.py
+  visible: true
+- name: evaluate.py
+  visible: false
+- name: network.py
+  visible: true
