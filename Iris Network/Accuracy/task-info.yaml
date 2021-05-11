@@ -1,44 +1,5 @@
 type: edu
 files:
-- name: task.py
-  visible: true
-  placeholders:
-  - offset: 1292
-    length: 94
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Iris Network
-      task: Train and Predict
-      file: task.py
-      placeholder: 1
-      is_visible: false
-  - offset: 1454
-    length: 261
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Iris Network
-      task: Train and Predict
-      file: task.py
-      placeholder: 2
-      is_visible: false
-  - offset: 1804
-    length: 60
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Iris Network
-      task: Train and Predict
-      file: task.py
-      placeholder: 3
-      is_visible: false
-  - offset: 1900
-    length: 26
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Iris Network
-      task: Train and Predict
-      file: task.py
-      placeholder: 4
-      is_visible: false
 - name: __init__.py
   visible: false
 - name: iris.csv
@@ -47,3 +8,13 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: activation.py
+  visible: true
+- name: derivative.py
+  visible: true
+- name: evaluate.py
+  visible: true
+- name: network.py
+  visible: true
+- name: task.py
+  visible: true
