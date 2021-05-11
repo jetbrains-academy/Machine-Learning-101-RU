@@ -35,5 +35,5 @@ if __name__ == '__main__':
     X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
     nn = NN(len(X[0]), 5, 1)
     nn.train(X_train, y_train)
-    print("Accuracy:")
-    print(accuracy(nn, X_test, y_test))
+    # print("Accuracy:")
+    # print(accuracy(nn, X_test, y_test))
