@@ -22,3 +22,5 @@ files:
   visible: false
 - name: neuron-scheme.png
   visible: false
+- name: neuralnet.png
+  visible: false

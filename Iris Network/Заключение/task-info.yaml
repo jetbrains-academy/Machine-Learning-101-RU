@@ -16,3 +16,5 @@ files:
   visible: true
 - name: neuron-scheme.png
   visible: false
+- name: neuralnet.png
+  visible: false
