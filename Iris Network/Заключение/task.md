@@ -1,52 +1,27 @@
-<html>
+Нейронные сети используются для решения множества разных задач, как правило довольно сложных, как то же 
+распознавание образов. В мозгу человека такие процессы происходят неосознанно и их алгоритмы неизвестны или не 
+до конца изучены. Собственно говоря, нейронные сети созданы именно для того, чтобы помогать людям решать задачи 
+со сложными и не до конца исследованными алгоритмами. Нейронные сети не программируются в привычном смысле этого слова, 
+они обучаются. Возможность обучения — одно из главных преимуществ нейронных сетей перед традиционными алгоритмами.
 
-<h2>Task Description: Tips & Tricks</h2>
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>Task Description</strong> window.</p>
+Несмотря на то, что обратное распространение ошибки было придумано довольно-таки давно, раньше нейросети не пользовались 
+большой популярностью, так как не было достаточных вычислительных мощностей и объёмов данных, не было возможности быстро 
+опробовать разные новые архитектуры, специально заточенные под задачу.
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+Одна из архитектур, послужившая толчком для роста интереса к нейросетям – <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%91%D1%80%D1%82%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C">свёрточные нейросети</a> 
+(**convolutional neural network, CNN**). Это тип нейросетей прямого распространения (Feedforward NN), 
+то есть таких сетей, где нет циклов или петель обратной связи. CNN являются одними из лучших алгоритмов для 
+распознавания и классификации изображений.
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
+Еще одна интересная архитектура сети – <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C">рекуррентные нейронные сети</a> 
+(**Recurrent NN, RNN**), в них имеются обратные связи – то есть связи от логически более удаленных элементов к менее удаленным. 
+Обратные связи позволяют запоминать и воспроизводить последовательности реакций на один стимул, обрабатывать серии 
+событий во времени или последовательные пространственные цепочки. RNN применимы в таких задачах, где нечто целостное 
+разбито на части, например: распознавание рукописного текста или распознавание речи. Также RNN можно использовать для 
+генерации текста или, например, кода. 
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use HTML only.
-<div class="hint">Text of your hint</div></li>
-
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
-
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
-
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
-
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
-</html>
+<h3>Дополнительная литература</h3>
+- Книга “<a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a>” (на английском)
+- Книга “<a href="https://books.google.ru/books/about/Neural_Networks.html?id=bX4pAQAAMAAJ&source=kp_book_description&redir_esc=y">Neural Networks: A Comprehensive Foundation</a>” 
+  есть в <a href="https://books.google.ru/books?id=LPMr0iA0muwC&printsec=copyright&hl=ru&source=gbs_pub_info_r#v=onepage&q&f=false">русском переводе</a>. 
