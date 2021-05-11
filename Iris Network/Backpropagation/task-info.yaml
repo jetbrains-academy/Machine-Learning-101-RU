@@ -11,7 +11,7 @@ files:
 - name: activation.py
   visible: true
 - name: derivative.py
-  visible: false
+  visible: true
 - name: evaluate.py
   visible: false
 - name: network.py
