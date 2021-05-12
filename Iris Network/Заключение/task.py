@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from network import NN
+from evaluate import accuracy
 
 
 def read_data(fpath):
@@ -13,7 +15,7 @@ def read_data(fpath):
 
 
 def plot_data(X, y):
-    plt.scatter(X[0, :], X[1, :], c=y[0, :], s=40, cmap=plt.cm.Spectral)
+    plt.scatter(X[:, 0], X[:, 1], c=y[:, 0], s=40, cmap=plt.cm.Spectral)
     plt.title("IRIS DATA | Blue - Versicolor, Red - Virginica ")
     plt.xlabel('Petal Length')
     plt.ylabel('Petal Width')
@@ -27,47 +29,20 @@ def train_test_split(X, y, ratio=0.8):
     return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
 
 
-def sigmoid(x):
-    return 1.0 / (1.0 + np.exp(-x))
-
-
-def sigmoid_derivative(x):
-    return x * (1.0 - x)
-
-
-class NN:
-    def __init__(self, input_size, hidden_size, output_size):
-        self.w1 = 2 * np.random.random((input_size, hidden_size)) - 1
-        self.w2 = 2 * np.random.random((hidden_size, output_size)) - 1
-
-    def feedforward(self, X):
-        self.layer1 = sigmoid(np.dot(X, self.w1))
-        return sigmoid(np.dot(self.layer1, self.w2))
-
-    def backward(self, X, y, output, learning_rate=0.01):
-        delta_l2 = (y - output) * sigmoid_derivative(output)
-        delta_l1 = np.dot(delta_l2, self.w2.T) * sigmoid_derivative(self.layer1)
-        self.w2 += (np.dot(self.layer1.T, delta_l2) * learning_rate)
-        self.w1 += (np.dot(X.T, delta_l1) * learning_rate)
-
-    def train(self, X, y, n_iter=20000):
-        for itr in range(n_iter):
-            l2 = self.feedforward(X)
-            self.backward(X, y, l2)
-
-    def predict(self, X):
-        return self.feedforward(X)
-
-
-def evaluate(nn, X_test, y_test):
-    nn_y = nn.predict(X_test)
-    return ((nn_y > 0.5).astype(int) == y_test).sum() / len(y_test)
-
 
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
+    # comment the following line if you don't need the plot anymore
+    plot_data(X, y)
     X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
     nn = NN(len(X[0]), 5, 1)
+    output = nn.feedforward(X_train)
+    print(output)
+    print(f'w1 before backward propagation: \n{nn.w1} \nw2 before backward propagation:\n{nn.w2}')
+    nn.backward(X_train, y_train, output)
+    print(f'w1 after backward propagation: \n{nn.w1} \nw2 after backward propagation:\n{nn.w2}')
     nn.train(X_train, y_train)
     print("Accuracy:")
-    print(evaluate(nn, X_test, y_test))
+    print(accuracy(nn, X_test, y_test))
+
+

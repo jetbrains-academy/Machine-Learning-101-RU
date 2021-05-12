@@ -31,7 +31,9 @@ def train_test_split(X, y, ratio=0.8):
 
 if __name__ == '__main__':
     X, y = read_data('iris.csv')
+    # comment the following line if you don't need the plot anymore
     plot_data(X, y)
     nn = NN(len(X[0]), 5, 1)
-    output = nn.feedforward(X)
+    X_train, y_train, X_test, y_test = train_test_split(X, y, 0.7)
+    output = nn.feedforward(X_train)
     print(output)
