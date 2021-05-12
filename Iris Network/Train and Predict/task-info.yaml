@@ -22,3 +22,5 @@ files:
   visible: false
 - name: neuralnet.png
   visible: false
+- name: tests/__init__.py
+  visible: false

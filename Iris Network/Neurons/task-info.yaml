@@ -15,9 +15,9 @@ files:
 - name: evaluate.py
   visible: false
 - name: tests/__init__.py
-  visible: true
+  visible: false
 - name: tests/test_task.py
-  visible: true
+  visible: false
 - name: final.py
   visible: false
 - name: neuron-scheme.png
