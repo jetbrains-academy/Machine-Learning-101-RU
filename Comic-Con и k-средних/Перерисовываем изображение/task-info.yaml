@@ -10,11 +10,13 @@ files:
   visible: false
 - name: tests/test_task.py
   visible: false
-- name: processing.py
-  visible: true
 - name: clustering.py
   visible: true
-- name: distances.py
+- name: barchart.png
   visible: true
 - name: plotting.py
+  visible: true
+- name: processing.py
+  visible: true
+- name: distances.py
   visible: true

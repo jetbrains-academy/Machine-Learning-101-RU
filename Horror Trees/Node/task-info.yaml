@@ -2,6 +2,10 @@ type: edu
 files:
 - name: task.py
   visible: true
+  placeholders:
+  - offset: 104
+    length: 127
+    placeholder_text: '#TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
@@ -12,17 +16,17 @@ files:
   visible: true
 - name: boo.jpg
   visible: false
-- name: calculate_entropy.py
-  visible: false
-- name: divide.py
-  visible: false
 - name: tree.py
-  visible: false
-- name: halloween.py
-  visible: false
+  visible: true
+- name: calculate_entropy.py
+  visible: true
+- name: divide.py
+  visible: true
 - name: node.py
   visible: true
 - name: example_tree.png
-  visible: false
+  visible: true
+- name: halloween.py
+  visible: true
 - name: RNA_tree.png
-  visible: false
+  visible: true

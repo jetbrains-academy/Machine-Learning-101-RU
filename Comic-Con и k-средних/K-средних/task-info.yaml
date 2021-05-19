@@ -10,15 +10,15 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: distances.py
-  visible: true
 - name: clustering.py
   visible: true
-- name: plotting.py
-  visible: false
-- name: processing.py
-  visible: false
 - name: barchart.png
-  visible: false
+  visible: true
+- name: plotting.py
+  visible: true
 - name: superman-batman-after.png
-  visible: false
+  visible: true
+- name: processing.py
+  visible: true
+- name: distances.py
+  visible: true
