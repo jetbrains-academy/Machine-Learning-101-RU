@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from ..task import NaiveBayes
+from bayes import NaiveBayes
 
 
 class TestCase(unittest.TestCase):

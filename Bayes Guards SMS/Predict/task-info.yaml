@@ -2,31 +2,13 @@ type: edu
 files:
 - name: task.py
   visible: true
-  placeholders:
-  - offset: 334
-    length: 528
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Bayes guards SMS
-      task: Laplace Smoothing
-      file: task.py
-      placeholder: 1
-      is_visible: false
-  - offset: 1393
-    length: 448
-    placeholder_text: '# TODO'
-    dependency:
-      lesson: Bayes guards SMS
-      task: Laplace Smoothing
-      file: task.py
-      placeholder: 2
-      is_visible: false
-  - offset: 1877
-    length: 640
-    placeholder_text: '# TODO'
 - name: __init__.py
   visible: true
 - name: spam.txt
   visible: true
 - name: tests/test_task.py
   visible: false
+- name: bayes.py
+  visible: true
+- name: vectorize.py
+  visible: true

@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from numpy.ma.testutils import assert_array_equal
 
-from task import vectorize
+from vectorize import vectorize
 
 
 class TestCase(unittest.TestCase):

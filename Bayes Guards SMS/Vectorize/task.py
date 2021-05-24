@@ -1,25 +1,25 @@
-import numpy as np
-import string
+import codecs
+from vectorize import *
+from bayes import NaiveBayes
 
 
-def split_by_words(X):
-    return np.core.chararray.lower(X).translate(str.maketrans('', '', string.punctuation)).split()
+def test_train_split(X, y, ratio=0.8):
+    mask = np.random.uniform(size=len(y)) < ratio
+    return X[mask], y[mask], X[~mask], y[~mask]
 
 
-def vectorize(X):
-    X_len = len(X)
-    X = split_by_words(X)
+def read_data(path):
+    file = codecs.open(path, encoding='latin1')
+    text = np.loadtxt(file, dtype=np.bytes_, delimiter='\t', unpack=True)
+    return np.core.chararray.decode(text)
 
-    uniques = np.unique(np.hstack(X))
-    index_dict = {}
-    for index, word in enumerate(uniques):
-        index_dict[word] = index
 
-    vectorization = np.zeros((X_len, len(index_dict)), dtype=np.int64)
-    for index, message in enumerate(X):
-        unique, count = np.unique(message, return_counts=True)
-        for i, word in enumerate(unique):
-            word_index = index_dict[word]
-            vectorization[index, word_index] = count[i]
+if __name__ == '__main__':
+    y, X = read_data('spam.txt')
+    X_train, y_train, X_test, y_test = test_train_split(X, y)
 
-    return index_dict, vectorization
+    nb = NaiveBayes()
+    nb.fit(X_train, y_train)
+    print(nb.classes_words_count)
+    print(nb.classes_prior)
+    print(nb.likelihood)

@@ -1,6 +1,7 @@
 type: edu
 files:
 - name: task.py
+  visible: false
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
@@ -8,4 +9,8 @@ files:
 - name: tests/__init__.py
   visible: false
 - name: spam.txt
+  visible: true
+- name: bayes.py
+  visible: false
+- name: vectorize.py
   visible: true
