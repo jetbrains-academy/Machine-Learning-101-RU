@@ -67,4 +67,5 @@ class NaiveBayes:
         # return result
 
     def score(self, X, y):
-        return np.sum(self.predict(X) == y) / len(y)
+        pass
+        # return # TODO
