@@ -10,3 +10,5 @@ files:
   visible: true
 - name: vectorize.py
   visible: true
+- name: Thomas_Bayes.png
+  visible: false
