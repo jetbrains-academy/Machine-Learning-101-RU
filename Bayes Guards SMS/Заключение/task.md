@@ -1,52 +1,44 @@
-<html>
+Наивный байесовский алгоритм&nbsp;— один из наиболеее часто используемых при обработке 
+естественных языков: при решении таких задач, он превосходит многие другие алгоритмы. 
+Благодаря этому, НБА находит широкое применение в области фильтрации спама 
+(идентификация спама в электронных письмах) и анализа тональности текста (анализ 
+социальных медиа, идентификация позитивных и негативных мнений клиентов). Однако у 
+него есть и другие области применения. 
 
-<h2>Task Description: Tips & Tricks</h2>
+- Наивный байесовский алгоритм очень быстро обучается, вследствие чего его можно 
+  использовать для **классификации данных в режиме реального времени**.
+  
+- Наивный байесовский классификатор в сочетании с коллаборативной фильтрацией 
+  (collaborative filtering) позволяет реализовать **рекомендательную систему**, 
+  в рамках которой новая для пользователя информация отфильтровывается на основании 
+  спрогнозированного мнения этого пользователя о ней при помощи методов машинного 
+  обучения и интеллектуального анализа данных.
+  
+- Позволяет прогнозировать вероятности для множества значений целевой переменной, 
+  то есть обеспечивает возможность **многоклассовой классификации**.
+  
+- [Байесовский подход в филогенетике](https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D0%B5%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4_%D0%B2_%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D0%BA%D0%B5) позволяет получить наиболее вероятные 
+  филогенетические деревья при заданных исходных данных&nbsp;— последовательностях 
+  ДНК или белков рассматриваемых организмов и эволюционной модели замен нуклеотидов. 
+  Преимущества в скорости вычислений и возможность интеграции с методами [MCMC](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D0%BF%D1%8C_%D0%9C%D0%BE%D0%BD%D1%82%D0%B5-%D0%9A%D0%B0%D1%80%D0%BB%D0%BE) 
+  (Markov chain Monte Carlo) позволили байесовскому подходу стать одним из самых 
+  популярных методов статистического вывода. Развитие методов MCMC позволяет вычислять 
+  большие иерархические модели, требующие интеграции от сотен до тысяч неизвестных 
+  параметров.
 
-<p>This is a task description file.
-Its content will be displayed to a learner
-in the <strong>Task Description</strong> window.</p>
+### Плюсы и минусы наивного байесовского алгоритма
 
-<p>It supports both Markdown and HTML.
-To toggle the format, you can rename <strong>task.md</strong>
-to <strong>task.html</strong>, or vice versa.
-The default task description format can be changed
-in <strong>Preferences | Tools | Education</strong>,
-but this will not affect any existing task description files.</p>
+**Плюсы**:
+- Классификация, в том числе многоклассовая, выполняется легко и быстро.
+- Хорошо работает с категориальными признаками.
+- Когда допущение о независимости выполняется, наивный байесовский классификатор 
+  работает лучше, чем другие алгоритмы, например логистическая регрессия 
+  (logistic regression), и при этом требует меньший объем данных для обучения.
 
-<p>The following features are available in
-<strong>task.md/task.html</strong>
-which are specific to the EduTools plugin:</p>
+**Минусы**:
+- Ограничением является допущение о независимости признаков. В реальности 
+  наборы полностью независимых признаков встречаются крайне редко.
+- Существует проблема “нулевой частоты”, но она решается с помощью сглаживания.
+- Данный алгоритм работает с непрерывными признаками хуже, чем с категориальными. 
+  Для непрерывных предполагается нормальное распределение, что является сильным допущением.
 
-<ul>
-<li>Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use HTML only.
-<div class="hint">Text of your hint</div></li>
-
-<li>You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the <code>&lt;a href="course://lesson1/task1/file1"&gt;
-link_text&lt;/a&gt;</code> format.</li><br>
-
-<li>You can insert shortcuts in the task description.
-While <strong>task.html/task.md</strong> is open,
-right-click anywhere on the <strong>Editor</strong> tab
-and choose the <strong>Insert shortcut</strong> option
-from the context menu.
-For example: &amp;shortcut:FileStructurePopup;.</li><br>
-
-<li>Insert the &percnt;<code>IDE_NAME</code>&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, <strong>%IDE_NAME%</strong>.</li><br>
-
-<li>Insert PSI elements, by using links like
-<code>&lt;a href="psi_element://link.to.element"&gt;element description&lt;/a&gt;</code>.
-To get such a link, right-click the class or method
-and select <strong>Copy Reference</strong>.
-Then press &amp;shortcut:EditorPaste;
-to insert the link where appropriate.
-For example, a
-<a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.</li>
-</ul>
-</html>
