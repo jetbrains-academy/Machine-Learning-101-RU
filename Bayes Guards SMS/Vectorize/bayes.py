@@ -2,7 +2,7 @@ import numpy as np
 from vectorize import *
 
 class NaiveBayes:
-    # a predefined method needed for Laplace Smoothing
+    # a predefined method needed for 'Laplace Smoothing'
     def __init__(self, alpha=1):
         self.alpha = alpha
 
@@ -38,6 +38,7 @@ class NaiveBayes:
             denominator = # TODO
             self.likelihood[i] = self.likelihood[i] / denominator
 
+    # the following methods are needed for the task 'Predict'
     def predict(self, X):
         pass
         # result = []
