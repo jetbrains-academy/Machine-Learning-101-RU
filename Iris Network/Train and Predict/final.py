@@ -13,7 +13,6 @@ def read_data(fpath):
     return iris[['petal_length', 'petal_width']].values, iris[['species']].values.astype('uint8')
 
 
-
 def train_test_split(X, y, ratio=0.8):
     indices = np.arange(X.shape[0])
     np.random.shuffle(indices)
@@ -21,9 +20,8 @@ def train_test_split(X, y, ratio=0.8):
     return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
 
 
-
 if __name__ == '__main__':
-    X, y = read_data('./Forward Step/iris.csv')
+    X, y = read_data('iris.csv')
     trainX, trainY, testX, testY = train_test_split(X, y, 0.7)
     nn = NN(len(X[0]), 5, 1)
     nn.train(trainX, trainY)
