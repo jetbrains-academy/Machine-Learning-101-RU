@@ -42,4 +42,5 @@ if __name__ == '__main__':
     nn.backward(X_train, y_train, output)
     print(f'w1 after backward propagation: \n{nn.w1} \nw2 after backward propagation:\n{nn.w2}')
     nn.train(X_train, y_train)
+    print(f'w1 after training: \n{nn.w1} \nw2 after training:\n{nn.w2}')
 
