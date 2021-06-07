@@ -2,6 +2,7 @@ import numpy as np
 from activation import sigmoid
 from derivative import sigmoid_derivative
 
+
 # Here we implemented the class NN to store our neural network. It contains two weight
 # arrays - w1 and w1, which will be updated as the network learns. You will implement the
 # methods of this class that are needed to train the network and to use it for object classification.
@@ -12,6 +13,7 @@ class NN:
 
     def feedforward(self, X):
         # first use the activation function on the product of multiplication
+        # of input data and the first array of weights
         self.layer1 = # TODO
         # next, use the activation function on the product of multiplication
         # of the second array of weights and the result of calculation on
@@ -40,7 +42,7 @@ class NN:
     def train(self, X, y, n_iter=20000):
         pass
         # Call the feedforward and backward methods of the data n_iter times
-        # to train the network. This method should not return anythig
+        # to train the network. This method should not return anything
         # for itr in range(n_iter):
             # l2 = # TODO
             # TODO
