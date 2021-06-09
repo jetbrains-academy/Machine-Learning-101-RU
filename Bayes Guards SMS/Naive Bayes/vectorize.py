@@ -7,15 +7,15 @@ def split_by_words(X):
 
 def vectorize(X):
     X_len = len(X)
-    X = split_by_words(X)
+    X_split = split_by_words(X)
 
-    uniques = np.unique(np.hstack(X))
+    uniques = np.unique(np.hstack(X_split))
     index_dict = {}
     for index, word in enumerate(uniques):
         index_dict[word] = index
 
     vectorization = np.zeros((X_len, len(index_dict)), dtype=np.int64)
-    for index, message in enumerate(X):
+    for index, message in enumerate(X_split):
         unique, count = np.unique(message, return_counts=True)
         for i, word in enumerate(unique):
             word_index = index_dict[word]
