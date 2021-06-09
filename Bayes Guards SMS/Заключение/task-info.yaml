@@ -12,3 +12,5 @@ files:
   visible: true
 - name: Thomas_Bayes.png
   visible: false
+- name: tests/test_task.py
+  visible: false
