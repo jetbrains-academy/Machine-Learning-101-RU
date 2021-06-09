@@ -67,3 +67,7 @@ print('Total number of words in each class: ', nb.classes_words_count)
 print('Class prior probabilities: ', nb.classes_prior)
 print('Relative word frequencies for each class: ', nb.likelihood)
 ```
+Кроме того, импортируйте модуль с необходимым классом в `task.py`:
+```python
+from bayes import NaiveBayes
+```
