@@ -1,12 +1,15 @@
 import numpy as np
 from vectorize import *
 
+
 class NaiveBayes:
-    # a predefined method needed for 'Laplace Smoothing'
+    # a predefined method needed for 'Laplace Smoothing' that initializes the
+    # smoothing alpha parameter, by default it's 1
     def __init__(self, alpha=1):
         self.alpha = alpha
 
     def fit(self, X, y):
+        # This allows us to get the uniques classes from the array of all class labels
         self.unique_classes = np.unique(y)
 
         # get the unique dictionary and input data representation array using vectorize()
@@ -66,6 +69,9 @@ class NaiveBayes:
         #     result.append(predicted)
         # return result
 
+
+    # This method should run the algorithm on the test set, compare the obtained classification
+    # results with the real class labels, and return the proportion of correctly classified objects.
     def score(self, X, y):
         pass
         # return # TODO
