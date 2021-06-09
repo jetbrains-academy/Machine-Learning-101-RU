@@ -1,6 +1,7 @@
 import numpy as np
 import codecs
 from bayes import NaiveBayes
+from vectorize import *
 
 
 def test_train_split(X, y, ratio=0.8):
@@ -18,9 +19,15 @@ if __name__ == '__main__':
     y, X = read_data('spam.txt')
     X_train, y_train, X_test, y_test = test_train_split(X, y)
 
+    index_dict, vectorization = vectorize(X_train)
+    print('Last 10 items of your index dictionary: ', dict(list(index_dict.items())[-10:]))
+    print('Vectorization array dimensions: ', vectorization.shape)
     nb = NaiveBayes()
     nb.fit(X_train, y_train)
-    print(nb.predict(["This is not a spam"]))
+    print('Total number of words in each class: ', nb.classes_words_count)
+    print('Class prior probabilities: ', nb.classes_prior)
+    print('Relative word frequencies for each class: ', nb.likelihood)
+    print(nb.predict(["This is not a spam message"]))
     print("Score:")
     print(nb.score(X_test, y_test))
     print(nb.score(X_train, y_train))

@@ -58,4 +58,12 @@ $$P(\text{Who let the dogs out}) = P(\text{Who}) \times P(\text{let}) \times P(\
 элементы вдоль выбранной оси. По умолчанию <code>axis=None</code>, то есть суммируются все элементы массива.</div>
 
 Чтобы посмотреть, как работает ваш код, вы можете запускать `task.py`.
-В этом задании модифицировать `task.py` не нужно.
+В этом задании добавьте следующие строки в блок `if __name__ == '__main__':`, прежде, чем
+запускать код:
+```python
+nb = NaiveBayes()
+nb.fit(X_train, y_train)
+print('Total number of words in each class: ', nb.classes_words_count)
+print('Class prior probabilities: ', nb.classes_prior)
+print('Relative word frequencies for each class: ', nb.likelihood)
+```

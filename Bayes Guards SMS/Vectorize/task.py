@@ -18,8 +18,6 @@ if __name__ == '__main__':
     y, X = read_data('spam.txt')
     X_train, y_train, X_test, y_test = test_train_split(X, y)
 
-    nb = NaiveBayes()
-    nb.fit(X_train, y_train)
-    print(nb.classes_words_count)
-    print(nb.classes_prior)
-    print(nb.likelihood)
+    index_dict, vectorization = vectorize(X_train)
+    print('Last 10 items of your index dictionary: ', dict(list(index_dict.items())[-10:]))
+    print('Vectorization array dimensions: ', vectorization.shape)
