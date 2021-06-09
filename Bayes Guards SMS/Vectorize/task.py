@@ -1,6 +1,5 @@
 import codecs
 from vectorize import *
-from bayes import NaiveBayes
 
 
 def test_train_split(X, y, ratio=0.8):
