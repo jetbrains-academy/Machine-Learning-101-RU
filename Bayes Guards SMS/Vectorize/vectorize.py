@@ -3,11 +3,11 @@ import string
 
 
 # This function creates an array of lines, where lines are transformed into lists of words
-# without spaces and punctuation symbols. `chararray.lower()` returns an array with the elements
-# converted to lowercase; `translate()` return a copy of the string where characters have
+# without spaces and punctuation symbols. `np.char.lower()` returns an array with the elements
+# converted to lowercase; `translate()` returns a copy of the string where characters have
 # been mapped through the given translation table; `str.maketrans()` provides a translation table
 # for `translate()`, in our case it specifies that punctuation symbols should be replaced with
-# None.
+# None. `np.char.split()` returns a list of the words for each element in the array.
 def split_by_words(X):
     return np.char.split(np.char.translate(np.char.lower(X), str.maketrans('', '', string.punctuation)))
 
