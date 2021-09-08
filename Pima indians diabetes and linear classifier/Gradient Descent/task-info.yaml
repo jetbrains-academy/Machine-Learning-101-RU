@@ -8,3 +8,5 @@ files:
   visible: true
 - name: tests/test_task.py
   visible: false
+- name: loss_functions.py
+  visible: true
