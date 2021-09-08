@@ -2,6 +2,14 @@ import unittest
 from ..task import read_data
 
 
+# The reference implementation:
+# def read_data(fname):
+#     data = np.genfromtxt(fname, delimiter=',')
+#     X, y = data[:, :-1], data[:, -1]
+#     X = (X - X.mean(axis=0)) / X.std(axis=0)
+#     X = np.concatenate((-np.ones(len(X)).reshape((-1, 1)), X), axis=1)
+#     return X, y
+
 class TestCase(unittest.TestCase):
     def test_X(self):
         X, y = read_data("./task/pima-indians-diabetes.csv")
