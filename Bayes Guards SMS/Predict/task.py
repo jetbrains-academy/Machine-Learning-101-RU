@@ -12,7 +12,7 @@ def test_train_split(X, y, ratio=0.8):
 def read_data(path):
     file = codecs.open(path, encoding='latin1')
     text = np.loadtxt(file, dtype=np.bytes_, delimiter='\t', unpack=True)
-    return np.core.chararray.decode(text)
+    return np.char.decode(text)
 
 
 if __name__ == '__main__':

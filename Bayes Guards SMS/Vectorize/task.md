@@ -63,8 +63,9 @@ $P(Spam|sentence)$&nbsp;— вероятность того, что предло
 В файле `vectorize.py` уже реализована функция `split_by_words()`, которая принимает на вход вектор строк 
 и возвращает вектор из списков отдельных слов, которые были в каждой строке. Она использует следующие функции:
 
-- [numpy.core.defchararray.array](https://numpy.org/doc/1.18/reference/generated/numpy.core.defchararray.array.html) — позволяет создать массив из строк, игнорируя пробелы при сравнении элементов.
-- [numpy.chararray.translate](https://numpy.org/doc/1.18/reference/generated/numpy.chararray.translate.html) — позволяет преобразовать строку, применяя к каждому символу заданное преобразование.
+- [numpy.char.lower](https://numpy.org/doc/stable/reference/generated/numpy.char.lower.html) — возвращает массив элементов, преобразованных в нижний регистр.
+- [numpy.char.translate](https://numpy.org/doc/stable/reference/generated/numpy.char.translate.html#numpy-char-translate) — позволяет преобразовать строку, применяя к каждому символу заданное преобразование.
+- [numpy.char.split](https://numpy.org/devdocs/reference/generated/numpy.char.split.html#numpy-char-split) — для каждого элемента в массиве (строки) возвращает список слов.
 - [str.maketrans](https://docs.python.org/3/library/stdtypes.html#str.maketrans) — возвращает таблицу перевода символов (translation table). Использует три 
   аргумента&nbsp;— x, y, z&nbsp;— где ‘x’ и ‘y’&nbsp;— строки одинаковой длины и символы в ‘x’ заменяются 
   на символы ‘y’. Аргумент ‘z’&nbsp;—  строка (в нашем случае, string.punctuation), все символы из которой 

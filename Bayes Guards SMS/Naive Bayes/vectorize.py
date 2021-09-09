@@ -2,8 +2,7 @@ import numpy as np
 import string
 
 def split_by_words(X):
-    return np.core.chararray.lower(X).translate(str.maketrans('', '', string.punctuation)).split()
-
+    return np.char.split(np.char.translate(np.char.lower(X), str.maketrans('', '', string.punctuation)))
 
 def vectorize(X):
     X_len = len(X)
