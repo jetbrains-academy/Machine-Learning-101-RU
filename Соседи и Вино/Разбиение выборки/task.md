@@ -47,3 +47,7 @@
 <br/>
 
 ![Wine](wine.jpg)
+
+> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
+> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSfix9bjakXkVGr7c0ErZWzzIdGUUAGwASokBj8CB0ql0s5HWA/viewform?usp=sf_link">ссылке</a>.
+> Cпасибо :) </i>

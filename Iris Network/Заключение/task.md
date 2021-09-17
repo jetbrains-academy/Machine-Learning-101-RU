@@ -30,3 +30,7 @@
 - Книга “<a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a>” (на английском)
 - Книга “<a href="https://books.google.ru/books/about/Neural_Networks.html?id=bX4pAQAAMAAJ&source=kp_book_description&redir_esc=y">Neural Networks: A Comprehensive Foundation</a>” 
   есть в <a href="https://books.google.ru/books?id=LPMr0iA0muwC&printsec=copyright&hl=ru&source=gbs_pub_info_r#v=onepage&q&f=false">русском переводе</a>. 
+
+> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
+> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7uQK8wSbhRUnReXtUeMKE0eRy6JjlutTH7iEbKzwKL1VV5g/viewform?usp=sf_link">ссылке</a>.
+> Cпасибо :) </i>
