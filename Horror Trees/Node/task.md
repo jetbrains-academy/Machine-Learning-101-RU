@@ -47,3 +47,7 @@ img {
 В этом задании модифицировать `task.py` не нужно.
 
 ![Boo](boo.jpg)
+
+> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
+> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCwqS-shsmh0fRT6Xr6n_RHeMEuQ8_7zPFsx_B22_5YUXYSQ/viewform?usp=sf_link">ссылке</a>.
+> Cпасибо :) </i>
