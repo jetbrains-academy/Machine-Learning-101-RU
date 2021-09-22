@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 from numpy.ma.testutils import assert_array_almost_equal
 
-from ..loss_functions import log_loss, sigmoid_loss
+from loss_functions import log_loss, sigmoid_loss
 
 
 class TestCase(unittest.TestCase):

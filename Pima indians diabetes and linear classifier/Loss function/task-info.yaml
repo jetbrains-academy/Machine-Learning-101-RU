@@ -10,3 +10,11 @@ files:
   visible: false
 - name: loss_functions.py
   visible: true
+- name: utils.py
+  visible: false
+- name: stochastic_gradient_descent.py
+  visible: false
+- name: precision_recall.py
+  visible: false
+- name: gradient_descent.py
+  visible: false
