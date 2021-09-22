@@ -1,0 +1,10 @@
+type: theory
+files:
+- name: __init__.py
+  visible: false
+- name: pima-indians-diabetes.csv
+  visible: true
+- name: task.py
+  visible: true
+- name: loss_functions.py
+  visible: true
