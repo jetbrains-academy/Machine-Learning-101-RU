@@ -1,5 +1,5 @@
 import unittest
-from ..task import read_data
+from task import read_data
 
 
 # The reference implementation:
