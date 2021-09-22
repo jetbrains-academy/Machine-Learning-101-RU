@@ -2,12 +2,12 @@ import unittest
 
 import numpy as np
 
-from ..task import SGD
+from stochastic_gradient_descent import StochasticGradientDescent
 
 
 class TestCase(unittest.TestCase):
     def test_weights(self):
-        gd = SGD(alpha=0.1, k=2)
+        gd = StochasticGradientDescent(alpha=0.1, k=2)
         X = np.array([[1, 2, 3, 4, 5],
                       [1, 2, 3, 4, 5],
                       [0, 0, 0, 0, 0],
@@ -17,14 +17,14 @@ class TestCase(unittest.TestCase):
         self.assertEquals(5, len(gd.weights))
 
     def test_fit(self):
-        gd = SGD(alpha=0.1)
+        gd = StochasticGradientDescent(alpha=0.1)
         X = np.array([[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]])
         y = np.array([1, 2])
         result = gd.fit(X, y)
         self.assertNotEqual(0, len(result))
 
     def test_predict(self):
-        gd = SGD(alpha=0.1)
+        gd = StochasticGradientDescent(alpha=0.1)
         X = np.array([[1, 2, 3, 4, 5],
                       [1, 2, 3, 4, 5],
                       [0, 0, 0, 0, 0],
