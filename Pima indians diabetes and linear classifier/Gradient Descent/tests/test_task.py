@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from ..task import GradientDescent
+from gradient_descent import GradientDescent
 
 
 class TestCase(unittest.TestCase):

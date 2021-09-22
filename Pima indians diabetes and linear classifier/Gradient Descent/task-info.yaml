@@ -10,3 +10,15 @@ files:
   visible: false
 - name: loss_functions.py
   visible: true
+- name: precision_recall.py
+  visible: true
+- name: gradient_descent.py
+  visible: true
+- name: utils.py
+  visible: true
+- name: stochastic_gradient_descent.py
+  visible: false
+- name: gradient-log_loss.png
+  visible: true
+- name: gradient-sigmoid_loss.png
+  visible: true
