@@ -34,7 +34,7 @@ class TestCase(unittest.TestCase):
             [128, 255, 64]
         ])
         y_predicted = knn(X_train, y_train, X_test, 1, euclidean_dist)
-        self.assertEqual(len(y_predicted), 12, "You should assign label for each object in the X_train")
+        self.assertEqual(12, len(y_predicted), "You should assign label for each object in the X_train")
 
     def test_knn_1_neighbor(self):
         X_train = np.array([
