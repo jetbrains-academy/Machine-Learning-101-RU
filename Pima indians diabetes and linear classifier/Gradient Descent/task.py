@@ -2,7 +2,6 @@ import numpy as np
 from utils import plot_classification
 
 
-
 def read_data(fname):
     data = np.genfromtxt(fname, delimiter=',')
     X, y = data[:, :-1], data[:, -1]

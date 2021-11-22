@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # The precision and recall metrics would be used to evaluate the quality of the prediction
 def precision_recall(y_pred, y_test):
     class_precision_recall = []

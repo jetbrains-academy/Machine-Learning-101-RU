@@ -18,7 +18,5 @@ files:
   visible: true
 - name: stochastic_gradient_descent.py
   visible: false
-- name: gradient-log_loss.png
-  visible: true
-- name: gradient-sigmoid_loss.png
-  visible: true
+- name: gradient-descent.png
+  visible: false

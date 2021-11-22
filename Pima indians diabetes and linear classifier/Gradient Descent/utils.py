@@ -18,14 +18,16 @@ def plot_classification(X, y):
     X_train, y_train, X_test, y_test = train_test_split(X, y, 0.8)
     for loss in [sigmoid_loss, log_loss]:
         plt.clf()
-        for alpha, color in zip([1e-7, 1e-4, 1e-2, 1], ["red", "blue", "green", "magenta"]):
+        # You can try adjusting alpha value, but a less one could lead to the
+        # exploding gradients. It will be indicated by a RuntimeWarning about encountering
+        # an overflow in the loss function's exp
+        for alpha, color in zip([1e-6, 1e-5, 1e-4], ["red", "blue", "green"]):
             gd = GradientDescent(alpha=alpha, loss=loss, threshold=1e-5)
             plt.plot(gd.fit(X_train, y_train), label=str(alpha), color=color, alpha=0.7, linewidth=1)
             print("GradientDescent({}, alpha={})".format(loss.__name__, alpha))
             print_precision_recall(precision_recall(gd.predict(X_test), y_test))
             print(gd.weights.tolist())
 
-        plt.ylim((plt.ylim()[0], min(1.5, plt.ylim()[1])))
         plt.title("GradientDescent({})".format(loss.__name__))
         plt.legend()
         plt.savefig("gradient-{}.png".format(loss.__name__))
