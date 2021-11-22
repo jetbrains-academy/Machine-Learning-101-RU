@@ -1,45 +1,7 @@
+В данном уроке мы рассмотрели пример реализации линейного классификатора с использованием стохастического градиентного спуска.
 
-This is a task description file.
-Its content will be displayed to a learner
-in the **Task Description** window.
+Это наиболее простой в реализации из всех методов локальной оптимизации, однако он является мощным инструментом для решения подобного класса задач. Мы рассмотрели пример классификации для двух классов - болен ли человек диабетом 2 типа или нет. Однако, метод может применяться и для большего количества классов. В таком случае, алгоритм потребует изрядной модификации. 
 
-It supports both Markdown and HTML.
-To toggle the format, you can rename **task.md**
-to **task.html**, or vice versa.
-The default task description format can be changed
-in **Preferences | Tools | Education**,
-but this will not affect any existing task description files.
+Для решения задач нет необходимости воспроизводить алгоритм вручную - он реализован, к примеру, в библиотеке [scikit](https://scikit-learn.org/stable/modules/sgd.html). При использовании данной версии необходимо будет передавать функции параметры, разобранные в данном уроке, такие как количество итераций для "стратегии оптимиста" (`n_iter`), или же вид функции потерь (`loss`). Также алгоритм, реализованный в *scikit*, имеет настройки для борьбы с взрывающимися градиентами из коробки.
 
-The following features are available in
-**task.md/task.html** which are specific to the EduTools plugin:
-
-- Hints can be added anywhere in the task text.
-Type "hint" and press Tab.
-Hints should be added to an empty line in the task text.
-In hints you can use both HTML and Markdown.
-<div class="hint">
-
-Text of your hint
-
-</div>
-
-- You may need to refer your learners to a particular lesson,
-task, or file. To achieve this, you can use the in-course links.
-Specify the path using the `[link_text](course://lesson1/task1/file1)` format.
-
-- You can insert shortcuts in the task description.
-While **task.html/task.md** is open, right-click anywhere
-on the **Editor** tab and choose the **Insert shortcut** option
-from the context menu.
-For example: &shortcut:FileStructurePopup;.
-
-- Insert the &percnt;`IDE_NAME`&percnt; macro,
-which will be replaced by the actual IDE name.
-For example, **%IDE_NAME%**.
-
-- Insert PSI elements, by using links like
-`<a href="psi_element://link.to.element">element description</a>`.
-To get such a link, right-click the class or method
-and select **Copy Reference**.
-Then press &shortcut:EditorPaste; to insert the link where appropriate.
-For example, a <a href="psi_element://java.lang.String#contains">link to the "contains" method</a>.
+Метод стохастического градиентного спуска может быть использован для настройки [метода опорных векторов (Support Vector Machine)](http://www.machinelearning.ru/wiki/index.php?title=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%BE%D0%BF%D0%BE%D1%80%D0%BD%D1%8B%D1%85_%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2), или же иных линейных классификаторов и регрессоров. Нередко он используется для классификации текста или же работы с естественным языком (Natural Language Processing). Также метод используется при настройке однослойного перцептрона и [нейронных сетей](http://www.machinelearning.ru/wiki/index.php?title=%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C). Это будет подробнее рассмотрено далее в курсе.

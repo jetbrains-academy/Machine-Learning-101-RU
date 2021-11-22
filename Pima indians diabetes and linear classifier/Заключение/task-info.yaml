@@ -8,3 +8,9 @@ files:
   visible: true
 - name: loss_functions.py
   visible: true
+- name: gradient_descent.py
+  visible: true
+- name: precision_recall.py
+  visible: true
+- name: stochastic_gradient_descent.py
+  visible: true
