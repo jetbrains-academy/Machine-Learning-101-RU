@@ -13,6 +13,14 @@ files:
 - name: pima.png
   visible: false
 - name: loss_functions.py
-  visible: true
+  visible: false
 - name: hyperplane.png
-  visible: true
+  visible: false
+- name: gradient_descent.py
+  visible: false
+- name: utils.py
+  visible: false
+- name: stochastic_gradient_descent.py
+  visible: false
+- name: precision_recall.py
+  visible: false
