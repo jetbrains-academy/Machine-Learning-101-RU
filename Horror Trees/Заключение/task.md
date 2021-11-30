@@ -42,7 +42,3 @@ Course View появится изображение `tree.jpg` &mdash; это н
 #### Ссылки для дополнительного чтения (на английском): 
 1) [Пример](https://iq.opengenus.org/id3-algorithm/#:~:text=ID3%20algorithm%2C%20stands%20for%20Iterative,or%20minimum%20Entropy%20(H)) использования алгоритма ID3 для предсказания погоды.
 2) [Статья](https://en.wikipedia.org/wiki/ID3_algorithm#cite_ref-2) из википедии про алгоритм ID3. 
-
-> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
-> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCwqS-shsmh0fRT6Xr6n_RHeMEuQ8_7zPFsx_B22_5YUXYSQ/viewform?usp=sf_link">ссылке</a>.
-> Cпасибо :) </i>
