@@ -78,7 +78,7 @@ $$weight = weight + learning\\_rate * error * input$$
 <div class="hint">При умножении матриц какие-то из них будет нужно транспонировать!</div>
 
 
-Для того чтобы посмотреть на результаты работы кода, вы можете добавить следующие строки в блок `if __name__ == '__main__':` в `task.py` и запустить его:
+Для того чтобы посмотреть на результаты работы кода, вы можете добавить следующие строки в блок `main` в `task.py` и запустить его:
 
 ```python
 print(f'w1 before backward propagation: \n{nn.w1} \nw2 before backward propagation:\n{nn.w2}')
