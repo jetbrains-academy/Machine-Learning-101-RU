@@ -62,7 +62,7 @@ $$ \arg\max\limits_{y \in Y} [ \log(P(y)) + \sum\limits_{j=1}^{|V|} log(p(x_j |y
 </div>
 
 Для того чтобы посмотреть на результаты работы своего кода, вы можете добавить следующие
-строчки в блок `if __name__ == '__main__':` в `task.py`, после чего запустить его:
+строчки в блок `main` в `task.py`, после чего запустить его:
 
 ```python
 print(nb.predict(["This is not a spam"]))

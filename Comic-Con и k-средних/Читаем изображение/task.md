@@ -27,7 +27,3 @@
 <a href="https://pillow.readthedocs.io/en/stable/">Pillow</a>. Например, в ней есть функция <code>open</code>, которая считывает изображение, найденное по указанному пути, и возвращает <a href="https://pillow.readthedocs.io/en/stable/reference/Image.html?highlight=open#PIL.Image.Image">объект Image</a>, который можно представить в форме массива, вызвав для него функцию <code>NumPy.array()</code>. 
 </div>
 
-
-> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
-> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQxVgSmjAXNyxqoF5O4XxXSYWvHv2UcLsqfyt0MtE6u9820A/viewform?usp=sf_link">ссылке</a>.
-> Cпасибо :) </i>

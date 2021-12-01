@@ -41,7 +41,7 @@
         import numpy as np
         from divide import Predicate
 ```
-2. Игрушечный датасет для проверки работы метода `divide` и вывод результата добавьте в блок `if __name__ == '__main__':`.
+2. Игрушечный датасет для проверки работы метода `divide` и вывод результата добавьте в блок `main`.
 ```python
         predicate = Predicate(3, 'clear')           
         X = np.array([[1, 1, 1, 'clear'],
