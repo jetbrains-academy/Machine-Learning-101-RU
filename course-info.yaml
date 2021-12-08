@@ -14,7 +14,7 @@ environment: unittest
 content:
 - О курсе
 - Зачем изучать машинное обучение
-- neighbours_and_wine
+- Соседи и Вино
 - Comic-Con и k-средних
 - Horror Trees
 - Pima indians diabetes and linear classifier
