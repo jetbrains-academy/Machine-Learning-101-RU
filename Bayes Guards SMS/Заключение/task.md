@@ -47,7 +47,3 @@
 модулем [sklearn.naive_bayes](https://scikit-learn.org/stable/modules/naive_bayes.html) библиотеки scikit-learn, где уже имплементированы нужные алгоритмы. 
 Это библиотека с открытым исходным кодом, предоставляющая широкий выбор алгоритмов обучения.
 
-
-> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
-> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3V5XUAMjCyU4uOuri9WKBEXpVsRfzCfMfVtnS8AzjqdXqFw/viewform?usp=sf_link">ссылке</a>.
-> Cпасибо :) </i>

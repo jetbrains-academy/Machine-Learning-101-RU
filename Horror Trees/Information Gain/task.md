@@ -42,7 +42,7 @@ $$IGain = H(parent_y) - H(children_{y|x}) $$
 </div>
 
 Для того чтобы посмотреть на результаты работы кода, вы можете добавить
-следующую строку в блок `if __name__ == '__main__':` в `task.py` и запустить его:
+следующую строку в блок `main` в `task.py` и запустить его:
 
 ```python
     print(f'Information Gain: {predicate.information_gain(X, y)}\n')     
