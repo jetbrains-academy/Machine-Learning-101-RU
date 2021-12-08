@@ -1,6 +1,7 @@
 import numpy as np
 from loss_functions import sigmoid_loss
 
+
 class StochasticGradientDescent:
     def __init__(self, *, alpha, loss=sigmoid_loss, k=1, n_iter=100):
         # k is the size of the samples the train sample is split into

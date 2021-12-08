@@ -1,6 +1,7 @@
 import numpy as np
 from loss_functions import sigmoid_loss
 
+
 class StochasticGradientDescent:
     def __init__(self, *, alpha, loss=sigmoid_loss, k=1, n_iter=100):
         # k is the size of the samples the train sample is split into
@@ -23,7 +24,7 @@ class StochasticGradientDescent:
         eta = 1 / len(y)
         # the algorithm will iterate exactly n_iter times
         for i in range(self.n_iter):
-            # e need to generate a batch of random k indices from the sample
+            # we need to generate a batch of random k indices from the sample
             # np.random.choice is a perfect fit for this
             batch_index = # generate the batch
             loss, grad = # calculate the gradient using the current weights, X and y batches
