@@ -18,3 +18,5 @@ files:
   visible: true
 - name: gradient_descent.py
   visible: true
+- name: gradient-descent.png
+  visible: false

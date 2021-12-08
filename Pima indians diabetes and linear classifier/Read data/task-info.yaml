@@ -24,3 +24,5 @@ files:
   visible: false
 - name: precision_recall.py
   visible: false
+- name: gradient-descent.png
+  visible: false
