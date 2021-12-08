@@ -10,13 +10,13 @@ files:
   visible: false
 - name: barchart.png
   visible: false
-- name: clustering.py
-  visible: true
 - name: plotting.py
-  visible: true
-- name: superman-batman-after.png
-  visible: true
-- name: processing.py
   visible: true
 - name: distances.py
   visible: true
+- name: clustering.py
+  visible: true
+- name: processing.py
+  visible: false
+- name: superman-batman-after.png
+  visible: false
