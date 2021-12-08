@@ -30,5 +30,5 @@ $$ x_{stand} = \dfrac {x - mean(x)} {standard \ deviation (x)}$$
 - Второй элемент пары — вектор `y`, в котором `-1` означает наличие диабета, а `1` — его отсутствие. Этот вектор подвергается нормализации данных. Процедура необходима для того, чтобы сравнивать знак произведения векторов с предполагаемым классом.
 
 <div class="hint">
-Во время выполнения задания могут быть полезны следующие функции: [numpy.ndarray.mean](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.mean.html), [numpy.mdarray.std](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.std.html), [np.concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html). 
+Во время выполнения задания могут быть полезны следующие функции: <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.mean.html">numpy.ndarray.mean</a>, <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.std.html">numpy.mdarray.std</a>, <a href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html">np.concatenate</a>. 
 </div>
