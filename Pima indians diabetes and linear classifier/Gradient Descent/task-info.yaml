@@ -20,3 +20,7 @@ files:
   visible: false
 - name: gradient-descent.png
   visible: false
+- name: hyperplane.png
+  visible: false
+- name: pima.png
+  visible: false
