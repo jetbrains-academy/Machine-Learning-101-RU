@@ -1,5 +1,7 @@
 type: edu
 files:
+- name: stochastic_gradient_descent.py
+  visible: true
 - name: __init__.py
   visible: false
 - name: pima-indians-diabetes.csv
@@ -11,8 +13,6 @@ files:
 - name: loss_functions.py
   visible: true
 - name: precision_recall.py
-  visible: true
-- name: stochastic_gradient_descent.py
   visible: true
 - name: utils.py
   visible: true
