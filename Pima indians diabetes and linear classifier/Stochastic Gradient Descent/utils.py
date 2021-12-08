@@ -10,7 +10,8 @@ from stochastic_gradient_descent import StochasticGradientDescent
 # the output is X_train, y_train, X_test, y_test
 def train_test_split(X, y, ratio=0.8):
     indices = np.arange(X.shape[0])
-    np.random.shuffle(indices)
+    rng = np.random.default_rng()
+    rng.shuffle(indices)
     train_len = int(X.shape[0] * ratio)
     return X[indices[:train_len]], y[indices[:train_len]], X[indices[train_len:]], y[indices[train_len:]]
 
