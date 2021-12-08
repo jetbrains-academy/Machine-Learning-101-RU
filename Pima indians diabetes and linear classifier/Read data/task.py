@@ -13,7 +13,7 @@ def read_data(fname):
     # the last one for y respectively
     X, y = data[:, :-1], data[:, -1]
     # The features are rescaled:
-    # X is standardized - every value is the values are centered around mean
+    # X is standardized - all values are centered around mean
     # with a unit standard deviation. It means if we will calculate mean
     # and standard deviation of standard scores it will be 0 and 1 respectively.
     # This procedure is recommended if the data follows normal distribution
