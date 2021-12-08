@@ -8,11 +8,11 @@ files:
   visible: false
 - name: tests/test_task.py
   visible: false
-- name: crossvalidation.py
-  visible: true
-- name: metric_classification.py
-  visible: true
 - name: distances.py
   visible: true
 - name: metrics.py
+  visible: true
+- name: crossvalidation.py
+  visible: true
+- name: metric_classification.py
   visible: true
