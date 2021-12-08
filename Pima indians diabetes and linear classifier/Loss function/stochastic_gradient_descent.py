@@ -16,7 +16,8 @@ class StochasticGradientDescent:
         # The initiation of random weights is similar to the original
         # gradient descent
         n = X.shape[1]
-        self.weights = np.random.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
+        rng = np.random.default_rng()
+        self.weights = rng.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
         errors = []
 
         q, _ = self.calc_grad(self.weights, X, y)

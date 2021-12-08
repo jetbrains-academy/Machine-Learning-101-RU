@@ -19,7 +19,8 @@ class GradientDescent:
         # low boundary of the interval set to  -1 / (2 * n)
         # high boundary of the interval is set to 1 / (2 * n)
         # The size of the sample is n
-        self.weights = np.random.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
+        rng = np.random.default_rng()
+        self.weights = rng.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
         # At the moment there is no errors
         errors = []
 

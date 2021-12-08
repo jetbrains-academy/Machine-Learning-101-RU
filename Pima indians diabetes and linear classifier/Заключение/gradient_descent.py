@@ -11,7 +11,8 @@ class GradientDescent:
 
     def fit(self, X, y):
         n = X.shape[1]
-        self.weights = np.random.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
+        rng = np.random.default_rng()
+        self.weights = rng.uniform(-1 / (2 * n), 1 / (2 * n), size=n)
         errors = []
 
         while True:
