@@ -1,0 +1,24 @@
+type: theory
+files:
+- name: __init__.py
+  visible: false
+- name: pima-indians-diabetes.csv
+  visible: true
+- name: task.py
+  visible: true
+- name: loss_functions.py
+  visible: true
+- name: gradient_descent.py
+  visible: true
+- name: precision_recall.py
+  visible: true
+- name: stochastic_gradient_descent.py
+  visible: true
+- name: utils.py
+  visible: true
+- name: gradient-descent.png
+  visible: false
+- name: hyperplane.png
+  visible: false
+- name: pima.png
+  visible: false
