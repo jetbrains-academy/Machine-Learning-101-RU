@@ -40,7 +40,7 @@
  ```python
 from tree import DecisionTree  
 ```
-2. Строки для вывода результата добавьте в блок `if __name__ == '__main__':`.
+2. Строки для вывода результата добавьте в блок `main`.
 ```python
 tree = DecisionTree().build(X, y) 
 print(f'{tree}\n')

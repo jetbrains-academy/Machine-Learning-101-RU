@@ -11,7 +11,3 @@
 
 Алгоритм **k-средних** также используется в более сложных задачах машинного обучения: к примеру, в [нейронной сети Кохонена](http://www.machinelearning.ru/wiki/index.php?title=%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C_%D0%9A%D0%BE%D1%85%D0%BE%D0%BD%D0%B5%D0%BD%D0%B0).
 
-
-> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
-> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQxVgSmjAXNyxqoF5O4XxXSYWvHv2UcLsqfyt0MtE6u9820A/viewform?usp=sf_link">ссылке</a>.
-> Cпасибо :) </i>

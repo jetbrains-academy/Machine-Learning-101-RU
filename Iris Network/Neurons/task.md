@@ -131,7 +131,3 @@ b_{n}
 В файле <code>activation.py</code> реализуйте логистическую функцию активации <code>sigmoid()</code>, пользуясь формулой, приведенной выше.
 
 </html>
-
-> <i>Этот курс сейчас в альфа-версии. Пожалуйста, помогите нам его улучшить. Для этого вы можете ответить
-> на вопросы к каждому из заданий данного урока в опроснике по <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7uQK8wSbhRUnReXtUeMKE0eRy6JjlutTH7iEbKzwKL1VV5g/viewform?usp=sf_link">ссылке</a>.
-> Cпасибо :) </i>
