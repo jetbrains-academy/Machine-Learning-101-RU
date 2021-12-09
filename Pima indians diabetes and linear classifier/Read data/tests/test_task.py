@@ -8,6 +8,7 @@ from task import read_data
 #     X, y = data[:, :-1], data[:, -1]
 #     X = (X - X.mean(axis=0)) / X.std(axis=0)
 #     X = np.concatenate((-np.ones(len(X)).reshape(-1, 1), X), axis=1)
+#     y = -(y * 2 - 1)
 #     return X, y
 
 class TestCase(unittest.TestCase):
