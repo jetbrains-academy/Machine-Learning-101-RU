@@ -21,8 +21,6 @@ class TestCase(unittest.TestCase):
         # init_clusters = lambda x, y: np.array([[0, 0], [1, 1]])
         for i in range(10):
             classification, clusters = k_means(X, 2, euclidean_distance)
-            print(classification)
-            print(type(classification))
             if np.array_equal(classification, [0, 0, 0, 0]):
                 continue
             else:
