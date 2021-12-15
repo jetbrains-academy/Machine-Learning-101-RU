@@ -58,7 +58,7 @@ from stochastic_gradient_descent import StochasticGradientDescent
 from utils import plot_classification
 ```
 
-*main в task.py*:
+`main` *в task.py*:
 ```python
 plot_classification(X, y)
 ```

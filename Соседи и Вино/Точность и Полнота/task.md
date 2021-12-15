@@ -2,7 +2,7 @@
 $$
 \operatorname{Precision} = \frac{TP}{TP + FP} \\\\
 \operatorname{Recall} = \frac{TP}{TP + FN}
-$$.
+$$
 
 Здесь
 - $TP$ — это количество элементов, которые классификатор **верно** отнес к классу $c$;
