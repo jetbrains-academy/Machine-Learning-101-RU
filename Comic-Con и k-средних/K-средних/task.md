@@ -44,3 +44,18 @@ $$ {\mu_{c} = \frac{\sum\limits_{j=1,\dots, n} [c_i = c] x_i^j}{\sum\limits_{c_i
 Заготовка для функции расположена в файле `clustering.py`. Там же находится функция `init_clusters`, создающая начальные центроиды для заданного набора данных. 
 
 При выполнении задания вам может пригодиться функция [numpy.sum](https://numpy.org/doc/1.18/reference/generated/numpy.sum.html), вычисляющая сумму элементов массива.
+
+Для того чтобы посмотреть на результаты работы кода, вы можете добавить
+следующие строки в `task.py` и запустить его:
+1. Необходимые импорты:
+ ```python
+from distances import euclidean_distance
+from clustering import k_means  
+```
+2. Строки для вывода результата добавьте в блок `main` вместо `print(image)`:
+```python
+(centroids, labels) = k_means(image, 4, euclidean_distance)
+print("Cluster centers:")
+for label in labels:
+    print(label)
+```

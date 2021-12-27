@@ -7,6 +7,19 @@
 Для сохранения изображения мы сначала создадим объект ```Pillow.Image``` (с ним мы уже сталкивались в задании **Чтение изображения**), воспользовавшись методом ```fromarray```, [создающим](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.fromarray) изображение из массива. Теперь необходимо сохранить изображение, используя метод ```image.save```.
 
 
+Для того, чтобы посмотреть на результаты работы кода, вы можете добавить
+следующие строки в `task.py` и запустить его:
+1. Необходимый импорт:
+ ```python
+from processing import process_image
+```
+2. Строку для получения результата добавьте в блок `main` **вместо** добавленных на предыдущем шаге:
+```python
+process_image(image)
+```
+Перерисованная картинка появится слева в списке файлов урока.
+
+
 <div class="column" style="float: left;width: 45%;padding: 5px;">
     <img src="superman-batman.png" alt="Исходное изображение" style="width:100%">
     <p style="text-align:center;">Исходное изображение</p>
@@ -15,3 +28,4 @@
     <img src="superman-batman-after.png" alt="16-цветное изображение" style="width:100%">
     <p style="text-align:center;">8-цветное изображение</p>
 </div>
+
