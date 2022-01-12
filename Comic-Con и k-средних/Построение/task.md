@@ -16,3 +16,18 @@
 <div class="hint">
 Для выполнения задания вам пригодится функция <a href="https://numpy.org/doc/stable/reference/generated/numpy.unique.html#numpy.unique">np.unique</a>, которая принимает на вход массив и возвращает только его уникальные элементы (тоже в виде массива). Функция также рассчитает, сколько раз встречается каждый из уникальных элементов, если вы передадите ей флаг <code>return_counts=true</code>.
 </div>
+
+Для того чтобы посмотреть на результаты работы кода, вы можете добавить
+следующие строки в `task.py` и запустить его:
+1. Необходимый импорт:
+ ```python
+from plotting import plot_colors, centroid_histogram
+```
+2. Строки для получения результата добавьте в блок `main` **вместо** добавленных на предыдущем шаге:
+```python
+(pixel_labels, centroids) = k_means(image, 4, euclidean_distance)
+print(pixel_labels)
+hist = centroid_histogram(pixel_labels)
+plot_colors(hist, centroids)
+```
+Гистограмма появится слева в списке файлов урока.
